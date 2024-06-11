@@ -1,0 +1,3531 @@
+Note that to produce these outputs, we used:
+- tanh on the embeddings to compute the simulariry matrices
+- relu activation function right before the last fc layer
+- Adam optimizer
+- the similarity measure is the cosine similarity
+- we ignore sequences that contained more than half ["<unk>"]
+
+Training on device cuda.
+Total number of words in the dataset:    2684706
+Total number of words in the dataset:    49526
+Number of distinct words kept:           1879
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  10000  |  weights True
+Black_list: <unk>
+1251349
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+16:08:49.298476  |  Epoch 1  |  Training loss 6.07263
+16:09:27.824025  |  Epoch 5  |  Training loss 4.99176
+16:10:15.820446  |  Epoch 10  |  Training loss 4.86742
+16:11:04.025619  |  Epoch 15  |  Training loss 4.82618
+16:11:52.157340  |  Epoch 20  |  Training loss 4.80551
+16:12:48.597960  |  Epoch 25  |  Training loss 4.79356
+16:13:40.782397  |  Epoch 30  |  Training loss 4.78513
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.13386
+Validation
+Accuracy: 0.16449
+Training
+Accuracy: 0.13386
+Validation
+Accuracy: 0.16449
+Test
+Accuracy: 0.16026
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.733132   |   pure 
+2  |   similitude: 0.709817   |   city 
+3  |   similitude: 0.704681   |   wooden 
+4  |   similitude: 0.668082   |   universal 
+5  |   similitude: 0.652065   |   social 
+6  |   similitude: 0.646207   |   once 
+7  |   similitude: 0.635790   |   faces 
+8  |   similitude: 0.634099   |   heads 
+9  |   similitude: 0.619583   |   re 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.847843   |   street 
+2  |   similitude: 0.847032   |   sea 
+3  |   similitude: 0.840377   |   ground 
+4  |   similitude: 0.813056   |   time 
+5  |   similitude: 0.808358   |   teeth 
+6  |   similitude: 0.783591   |   body 
+7  |   similitude: 0.779239   |   carriage 
+8  |   similitude: 0.774119   |   blood 
+9  |   similitude: 0.772639   |   luck 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.837395   |   lady 
+2  |   similitude: 0.808942   |   adjutant 
+3  |   similitude: 0.808701   |   bird 
+4  |   similitude: 0.800211   |   gardener 
+5  |   similitude: 0.799604   |   epoch 
+6  |   similitude: 0.797288   |   counsel 
+7  |   similitude: 0.781981   |   effort 
+8  |   similitude: 0.769922   |   feel 
+9  |   similitude: 0.766866   |   nobody 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.837959   |   whole 
+2  |   similitude: 0.783208   |   bare 
+3  |   similitude: 0.769018   |   skin 
+4  |   similitude: 0.749046   |   fifty 
+5  |   similitude: 0.728608   |   simple 
+6  |   similitude: 0.724717   |   three 
+7  |   similitude: 0.715939   |   common 
+8  |   similitude: 0.708104   |   paces 
+9  |   similitude: 0.704239   |   variety 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.908163   |   sound 
+2  |   similitude: 0.820744   |   field 
+3  |   similitude: 0.793334   |   ill 
+4  |   similitude: 0.780070   |   gloomy 
+5  |   similitude: 0.780010   |   merry 
+6  |   similitude: 0.760621   |   angrily 
+7  |   similitude: 0.743337   |   towards 
+8  |   similitude: 0.741677   |   noble 
+9  |   similitude: 0.737158   |   rolled 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.854453   |   fortune 
+2  |   similitude: 0.833316   |   ideas 
+3  |   similitude: 0.821110   |   or 
+4  |   similitude: 0.818666   |   lendermen 
+5  |   similitude: 0.801486   |   view 
+6  |   similitude: 0.786030   |   jumped 
+7  |   similitude: 0.733136   |   will 
+8  |   similitude: 0.732953   |   doors 
+9  |   similitude: 0.731111   |   corpse 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.848858   |   faces 
+2  |   similitude: 0.834478   |   men 
+3  |   similitude: 0.824256   |   eyes 
+4  |   similitude: 0.821049   |   fields 
+5  |   similitude: 0.815173   |   pair 
+6  |   similitude: 0.780571   |   movements 
+7  |   similitude: 0.762674   |   part 
+8  |   similitude: 0.726158   |   heart 
+9  |   similitude: 0.724890   |   generals 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.796547   |   act 
+2  |   similitude: 0.771088   |   danger 
+3  |   similitude: 0.763295   |   covering 
+4  |   similitude: 0.753452   |   small 
+5  |   similitude: 0.745187   |   teeth 
+6  |   similitude: 0.721777   |   cold 
+7  |   similitude: 0.718238   |   leaving 
+8  |   similitude: 0.717343   |   crossing 
+9  |   similitude: 0.717339   |   activity 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.873948   |   setting 
+2  |   similitude: 0.840700   |   suffering 
+3  |   similitude: 0.814450   |   possessed 
+4  |   similitude: 0.808165   |   holding 
+5  |   similitude: 0.807203   |   killed 
+6  |   similitude: 0.804688   |   highest 
+7  |   similitude: 0.795893   |   started 
+8  |   similitude: 0.779965   |   pleasure 
+9  |   similitude: 0.773554   |   twenty 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.904595   |   girl 
+2  |   similitude: 0.867141   |   soul 
+3  |   similitude: 0.839592   |   returning 
+4  |   similitude: 0.821546   |   wife 
+5  |   similitude: 0.817923   |   fire 
+6  |   similitude: 0.794058   |   gardener 
+7  |   similitude: 0.793365   |   adjutant 
+8  |   similitude: 0.788084   |   daughter 
+9  |   similitude: 0.782104   |   experience 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.906157   |   distant 
+2  |   similitude: 0.854833   |   wearing 
+3  |   similitude: 0.845406   |   growing 
+4  |   similitude: 0.821914   |   fine 
+5  |   similitude: 0.815295   |   thence 
+6  |   similitude: 0.764964   |   dangerous 
+7  |   similitude: 0.759922   |   tired 
+8  |   similitude: 0.756203   |   mysterious 
+9  |   similitude: 0.755208   |   five 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.825178   |   drawing 
+2  |   similitude: 0.818538   |   generals 
+3  |   similitude: 0.792119   |   will 
+4  |   similitude: 0.777891   |   corpse 
+5  |   similitude: 0.772584   |   are 
+6  |   similitude: 0.769966   |   faces 
+7  |   similitude: 0.764463   |   minutes 
+8  |   similitude: 0.759416   |   whilst 
+9  |   similitude: 0.756265   |   servant 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.947241   |   away 
+2  |   similitude: 0.851074   |   sofa 
+3  |   similitude: 0.815988   |   off 
+4  |   similitude: 0.790527   |   eastward 
+5  |   similitude: 0.787026   |   happen 
+6  |   similitude: 0.778717   |   return 
+7  |   similitude: 0.771868   |   north 
+8  |   similitude: 0.744849   |   apart 
+9  |   similitude: 0.733454   |   east 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.835225   |   more 
+2  |   similitude: 0.808411   |   didn 
+3  |   similitude: 0.794100   |   looking 
+4  |   similitude: 0.775141   |   very 
+5  |   similitude: 0.774931   |   nonsense 
+6  |   similitude: 0.746352   |   dead 
+7  |   similitude: 0.742553   |   laughing 
+8  |   similitude: 0.722482   |   friendly 
+9  |   similitude: 0.719971   |   paper 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.765790   |   proved 
+2  |   similitude: 0.756220   |   liked 
+3  |   similitude: 0.718884   |   no 
+4  |   similitude: 0.710788   |   happened 
+5  |   similitude: 0.704545   |   made 
+6  |   similitude: 0.696027   |   s 
+7  |   similitude: 0.689168   |   mere 
+8  |   similitude: 0.681006   |   join 
+9  |   similitude: 0.668797   |   please 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.872626   |   make 
+2  |   similitude: 0.843394   |   mean 
+3  |   similitude: 0.833612   |   choose 
+4  |   similitude: 0.831016   |   avoid 
+5  |   similitude: 0.814460   |   serve 
+6  |   similitude: 0.806111   |   consider 
+7  |   similitude: 0.791313   |   believe 
+8  |   similitude: 0.778024   |   ! 
+9  |   similitude: 0.775155   |   am 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  10000  |  weights True
+Black_list: <unk> | , | . | ! | ? | "
+1213400
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+16:14:38.762972  |  Epoch 1  |  Training loss 6.09728
+16:15:16.564087  |  Epoch 5  |  Training loss 4.99513
+16:16:04.047917  |  Epoch 10  |  Training loss 4.86764
+16:16:52.339713  |  Epoch 15  |  Training loss 4.82598
+16:17:39.800622  |  Epoch 20  |  Training loss 4.80515
+16:18:26.821253  |  Epoch 25  |  Training loss 4.79282
+16:19:13.791691  |  Epoch 30  |  Training loss 4.78473
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.13583
+Validation
+Accuracy: 0.16262
+Training
+Accuracy: 0.13583
+Validation
+Accuracy: 0.16262
+Test
+Accuracy: 0.16177
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.732697   |   pure 
+2  |   similitude: 0.697419   |   city 
+3  |   similitude: 0.688940   |   wooden 
+4  |   similitude: 0.667377   |   universal 
+5  |   similitude: 0.642591   |   social 
+6  |   similitude: 0.630253   |   once 
+7  |   similitude: 0.613932   |   other 
+8  |   similitude: 0.613234   |   heads 
+9  |   similitude: 0.607417   |   re 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.856893   |   street 
+2  |   similitude: 0.843187   |   sea 
+3  |   similitude: 0.831254   |   teeth 
+4  |   similitude: 0.827476   |   ground 
+5  |   similitude: 0.809131   |   lives 
+6  |   similitude: 0.802110   |   carriage 
+7  |   similitude: 0.799205   |   time 
+8  |   similitude: 0.792655   |   body 
+9  |   similitude: 0.784533   |   blood 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.843500   |   lady 
+2  |   similitude: 0.824404   |   effort 
+3  |   similitude: 0.820862   |   adjutant 
+4  |   similitude: 0.819814   |   bird 
+5  |   similitude: 0.794808   |   counsel 
+6  |   similitude: 0.794722   |   gardener 
+7  |   similitude: 0.794153   |   epoch 
+8  |   similitude: 0.791883   |   feel 
+9  |   similitude: 0.773623   |   nobody 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.835334   |   whole 
+2  |   similitude: 0.786384   |   bare 
+3  |   similitude: 0.766846   |   skin 
+4  |   similitude: 0.736387   |   simple 
+5  |   similitude: 0.729532   |   fifty 
+6  |   similitude: 0.722665   |   common 
+7  |   similitude: 0.719190   |   three 
+8  |   similitude: 0.712555   |   paces 
+9  |   similitude: 0.700019   |   walls 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.903636   |   sound 
+2  |   similitude: 0.815178   |   field 
+3  |   similitude: 0.786812   |   merry 
+4  |   similitude: 0.782264   |   gloomy 
+5  |   similitude: 0.773851   |   ill 
+6  |   similitude: 0.749851   |   noble 
+7  |   similitude: 0.743633   |   angrily 
+8  |   similitude: 0.738347   |   led 
+9  |   similitude: 0.730405   |   rolled 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.852782   |   fortune 
+2  |   similitude: 0.838434   |   ideas 
+3  |   similitude: 0.836507   |   lendermen 
+4  |   similitude: 0.823149   |   jumped 
+5  |   similitude: 0.821945   |   or 
+6  |   similitude: 0.809829   |   view 
+7  |   similitude: 0.793608   |   surface 
+8  |   similitude: 0.764905   |   corpse 
+9  |   similitude: 0.754165   |   doors 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.827403   |   pair 
+2  |   similitude: 0.817825   |   eyes 
+3  |   similitude: 0.808777   |   faces 
+4  |   similitude: 0.804362   |   men 
+5  |   similitude: 0.790253   |   movements 
+6  |   similitude: 0.771529   |   part 
+7  |   similitude: 0.770626   |   fields 
+8  |   similitude: 0.741927   |   gentleman 
+9  |   similitude: 0.732239   |   generals 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.797693   |   act 
+2  |   similitude: 0.791617   |   small 
+3  |   similitude: 0.768046   |   danger 
+4  |   similitude: 0.751769   |   covering 
+5  |   similitude: 0.738997   |   teeth 
+6  |   similitude: 0.735112   |   cold 
+7  |   similitude: 0.718014   |   voices 
+8  |   similitude: 0.713897   |   leaving 
+9  |   similitude: 0.712356   |   perfect 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.872905   |   setting 
+2  |   similitude: 0.835156   |   suffering 
+3  |   similitude: 0.824425   |   possessed 
+4  |   similitude: 0.802610   |   holding 
+5  |   similitude: 0.802321   |   highest 
+6  |   similitude: 0.797652   |   killed 
+7  |   similitude: 0.790029   |   started 
+8  |   similitude: 0.769654   |   sleeping 
+9  |   similitude: 0.768703   |   forced 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.934713   |   girl 
+2  |   similitude: 0.870319   |   soul 
+3  |   similitude: 0.814582   |   wife 
+4  |   similitude: 0.781029   |   power 
+5  |   similitude: 0.756634   |   returning 
+6  |   similitude: 0.755241   |   fire 
+7  |   similitude: 0.730022   |   bold 
+8  |   similitude: 0.728779   |   message 
+9  |   similitude: 0.717369   |   daughter 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.909227   |   distant 
+2  |   similitude: 0.856096   |   wearing 
+3  |   similitude: 0.849644   |   growing 
+4  |   similitude: 0.825240   |   fine 
+5  |   similitude: 0.816915   |   thence 
+6  |   similitude: 0.762851   |   double 
+7  |   similitude: 0.761693   |   single 
+8  |   similitude: 0.757871   |   dangerous 
+9  |   similitude: 0.751357   |   mysterious 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.858691   |   hours 
+2  |   similitude: 0.780509   |   nature 
+3  |   similitude: 0.732362   |   events 
+4  |   similitude: 0.726807   |   may 
+5  |   similitude: 0.704368   |   why 
+6  |   similitude: 0.703280   |   persons 
+7  |   similitude: 0.695312   |   beings 
+8  |   similitude: 0.678039   |   trees 
+9  |   similitude: 0.672585   |   what 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.951139   |   away 
+2  |   similitude: 0.826727   |   sofa 
+3  |   similitude: 0.801431   |   off 
+4  |   similitude: 0.786628   |   happen 
+5  |   similitude: 0.786197   |   return 
+6  |   similitude: 0.779969   |   apart 
+7  |   similitude: 0.777654   |   eastward 
+8  |   similitude: 0.770617   |   north 
+9  |   similitude: 0.733764   |   east 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.824157   |   more 
+2  |   similitude: 0.805288   |   looking 
+3  |   similitude: 0.784911   |   didn 
+4  |   similitude: 0.747845   |   laughing 
+5  |   similitude: 0.730665   |   as 
+6  |   similitude: 0.724056   |   very 
+7  |   similitude: 0.717521   |   friendly 
+8  |   similitude: 0.698663   |   sorts 
+9  |   similitude: 0.688836   |   commander 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.718403   |   proved 
+2  |   similitude: 0.712579   |   liked 
+3  |   similitude: 0.692599   |   no 
+4  |   similitude: 0.684919   |   ve 
+5  |   similitude: 0.677867   |   its 
+6  |   similitude: 0.667311   |   made 
+7  |   similitude: 0.663727   |   mere 
+8  |   similitude: 0.660163   |   everybody 
+9  |   similitude: 0.656595   |   happened 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.883259   |   make 
+2  |   similitude: 0.855709   |   choose 
+3  |   similitude: 0.841322   |   avoid 
+4  |   similitude: 0.834771   |   serve 
+5  |   similitude: 0.824048   |   consider 
+6  |   similitude: 0.804631   |   believe 
+7  |   similitude: 0.790087   |   looked 
+8  |   similitude: 0.778218   |   shows 
+9  |   similitude: 0.768769   |   am 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  10000  |  weights False
+Black_list: <unk>
+1251349
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+16:20:03.305064  |  Epoch 1  |  Training loss 6.06723
+16:20:42.176636  |  Epoch 5  |  Training loss 4.98647
+16:21:30.754161  |  Epoch 10  |  Training loss 4.86213
+16:22:19.193540  |  Epoch 15  |  Training loss 4.82086
+16:23:07.674819  |  Epoch 20  |  Training loss 4.80019
+16:23:56.148802  |  Epoch 25  |  Training loss 4.78825
+16:24:44.657860  |  Epoch 30  |  Training loss 4.77981
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.13377
+Validation
+Accuracy: 0.16717
+Training
+Accuracy: 0.13377
+Validation
+Accuracy: 0.16717
+Test
+Accuracy: 0.16366
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.733749   |   pure 
+2  |   similitude: 0.711235   |   city 
+3  |   similitude: 0.706514   |   wooden 
+4  |   similitude: 0.668415   |   universal 
+5  |   similitude: 0.652616   |   social 
+6  |   similitude: 0.646274   |   once 
+7  |   similitude: 0.636711   |   faces 
+8  |   similitude: 0.635104   |   heads 
+9  |   similitude: 0.620713   |   re 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.847642   |   sea 
+2  |   similitude: 0.847453   |   street 
+3  |   similitude: 0.842767   |   ground 
+4  |   similitude: 0.811386   |   time 
+5  |   similitude: 0.807857   |   teeth 
+6  |   similitude: 0.782896   |   body 
+7  |   similitude: 0.778258   |   carriage 
+8  |   similitude: 0.775549   |   blood 
+9  |   similitude: 0.772747   |   luck 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.836464   |   lady 
+2  |   similitude: 0.808663   |   bird 
+3  |   similitude: 0.808639   |   adjutant 
+4  |   similitude: 0.800644   |   gardener 
+5  |   similitude: 0.799685   |   epoch 
+6  |   similitude: 0.797423   |   counsel 
+7  |   similitude: 0.779176   |   effort 
+8  |   similitude: 0.768697   |   feel 
+9  |   similitude: 0.766539   |   nobody 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.837397   |   whole 
+2  |   similitude: 0.783607   |   bare 
+3  |   similitude: 0.768677   |   skin 
+4  |   similitude: 0.734146   |   fifty 
+5  |   similitude: 0.728042   |   simple 
+6  |   similitude: 0.724908   |   three 
+7  |   similitude: 0.715287   |   common 
+8  |   similitude: 0.707433   |   paces 
+9  |   similitude: 0.704473   |   variety 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.908952   |   sound 
+2  |   similitude: 0.821732   |   field 
+3  |   similitude: 0.793182   |   ill 
+4  |   similitude: 0.780611   |   merry 
+5  |   similitude: 0.779387   |   gloomy 
+6  |   similitude: 0.760900   |   angrily 
+7  |   similitude: 0.745237   |   towards 
+8  |   similitude: 0.741617   |   noble 
+9  |   similitude: 0.736936   |   rolled 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.852407   |   fortune 
+2  |   similitude: 0.832577   |   ideas 
+3  |   similitude: 0.822225   |   or 
+4  |   similitude: 0.817724   |   lendermen 
+5  |   similitude: 0.799824   |   view 
+6  |   similitude: 0.784172   |   jumped 
+7  |   similitude: 0.732330   |   will 
+8  |   similitude: 0.731527   |   doors 
+9  |   similitude: 0.729452   |   corpse 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.849586   |   faces 
+2  |   similitude: 0.835323   |   men 
+3  |   similitude: 0.823920   |   eyes 
+4  |   similitude: 0.820910   |   fields 
+5  |   similitude: 0.816692   |   pair 
+6  |   similitude: 0.780424   |   movements 
+7  |   similitude: 0.762782   |   part 
+8  |   similitude: 0.723988   |   generals 
+9  |   similitude: 0.721379   |   heart 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.795946   |   act 
+2  |   similitude: 0.770898   |   danger 
+3  |   similitude: 0.763402   |   covering 
+4  |   similitude: 0.752569   |   small 
+5  |   similitude: 0.744631   |   teeth 
+6  |   similitude: 0.721960   |   cold 
+7  |   similitude: 0.718809   |   leaving 
+8  |   similitude: 0.717063   |   crossing 
+9  |   similitude: 0.716256   |   activity 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.874429   |   setting 
+2  |   similitude: 0.840939   |   suffering 
+3  |   similitude: 0.813636   |   possessed 
+4  |   similitude: 0.807707   |   killed 
+5  |   similitude: 0.807218   |   holding 
+6  |   similitude: 0.804697   |   highest 
+7  |   similitude: 0.798181   |   started 
+8  |   similitude: 0.780451   |   pleasure 
+9  |   similitude: 0.774794   |   twenty 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.903508   |   girl 
+2  |   similitude: 0.865496   |   soul 
+3  |   similitude: 0.840466   |   returning 
+4  |   similitude: 0.818961   |   wife 
+5  |   similitude: 0.817580   |   fire 
+6  |   similitude: 0.794435   |   gardener 
+7  |   similitude: 0.793577   |   adjutant 
+8  |   similitude: 0.786369   |   daughter 
+9  |   similitude: 0.781001   |   experience 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.906617   |   distant 
+2  |   similitude: 0.856666   |   wearing 
+3  |   similitude: 0.845177   |   growing 
+4  |   similitude: 0.822504   |   fine 
+5  |   similitude: 0.813874   |   thence 
+6  |   similitude: 0.763924   |   dangerous 
+7  |   similitude: 0.760998   |   tired 
+8  |   similitude: 0.758127   |   mysterious 
+9  |   similitude: 0.756219   |   five 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.824919   |   drawing 
+2  |   similitude: 0.813642   |   generals 
+3  |   similitude: 0.789446   |   will 
+4  |   similitude: 0.774020   |   corpse 
+5  |   similitude: 0.771483   |   are 
+6  |   similitude: 0.766570   |   faces 
+7  |   similitude: 0.762089   |   whilst 
+8  |   similitude: 0.760317   |   minutes 
+9  |   similitude: 0.752179   |   servant 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.946934   |   away 
+2  |   similitude: 0.848038   |   sofa 
+3  |   similitude: 0.815778   |   off 
+4  |   similitude: 0.790967   |   eastward 
+5  |   similitude: 0.787875   |   happen 
+6  |   similitude: 0.777593   |   return 
+7  |   similitude: 0.771141   |   north 
+8  |   similitude: 0.743788   |   apart 
+9  |   similitude: 0.731394   |   east 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.834730   |   more 
+2  |   similitude: 0.808532   |   didn 
+3  |   similitude: 0.792368   |   looking 
+4  |   similitude: 0.774535   |   nonsense 
+5  |   similitude: 0.774077   |   very 
+6  |   similitude: 0.746878   |   dead 
+7  |   similitude: 0.741290   |   laughing 
+8  |   similitude: 0.722519   |   friendly 
+9  |   similitude: 0.719074   |   paper 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.760349   |   proved 
+2  |   similitude: 0.752586   |   liked 
+3  |   similitude: 0.720857   |   no 
+4  |   similitude: 0.704539   |   happened 
+5  |   similitude: 0.699931   |   made 
+6  |   similitude: 0.698770   |   s 
+7  |   similitude: 0.684399   |   mere 
+8  |   similitude: 0.676270   |   join 
+9  |   similitude: 0.675271   |   its 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.872753   |   make 
+2  |   similitude: 0.843922   |   mean 
+3  |   similitude: 0.834431   |   choose 
+4  |   similitude: 0.831529   |   avoid 
+5  |   similitude: 0.814865   |   serve 
+6  |   similitude: 0.806961   |   consider 
+7  |   similitude: 0.790396   |   believe 
+8  |   similitude: 0.778163   |   ! 
+9  |   similitude: 0.776455   |   am 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  10000  |  weights False
+Black_list: <unk> | , | . | ! | ? | "
+1213400
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+16:25:40.570241  |  Epoch 1  |  Training loss 6.09288
+16:26:18.304110  |  Epoch 5  |  Training loss 4.99060
+16:27:05.949605  |  Epoch 10  |  Training loss 4.86309
+16:27:52.620993  |  Epoch 15  |  Training loss 4.82139
+16:28:39.263226  |  Epoch 20  |  Training loss 4.80058
+16:29:25.954727  |  Epoch 25  |  Training loss 4.78825
+16:30:13.588530  |  Epoch 30  |  Training loss 4.78016
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.13589
+Validation
+Accuracy: 0.16428
+Training
+Accuracy: 0.13589
+Validation
+Accuracy: 0.16428
+Test
+Accuracy: 0.16404
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.732306   |   pure 
+2  |   similitude: 0.697834   |   city 
+3  |   similitude: 0.689244   |   wooden 
+4  |   similitude: 0.667691   |   universal 
+5  |   similitude: 0.643537   |   social 
+6  |   similitude: 0.628278   |   once 
+7  |   similitude: 0.614606   |   heads 
+8  |   similitude: 0.614532   |   other 
+9  |   similitude: 0.607690   |   re 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.856616   |   street 
+2  |   similitude: 0.843034   |   sea 
+3  |   similitude: 0.831261   |   teeth 
+4  |   similitude: 0.829437   |   ground 
+5  |   similitude: 0.808900   |   lives 
+6  |   similitude: 0.801800   |   carriage 
+7  |   similitude: 0.801224   |   time 
+8  |   similitude: 0.792913   |   body 
+9  |   similitude: 0.784826   |   blood 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.842914   |   lady 
+2  |   similitude: 0.824074   |   effort 
+3  |   similitude: 0.821035   |   adjutant 
+4  |   similitude: 0.820013   |   bird 
+5  |   similitude: 0.794849   |   counsel 
+6  |   similitude: 0.794749   |   gardener 
+7  |   similitude: 0.794402   |   epoch 
+8  |   similitude: 0.791656   |   feel 
+9  |   similitude: 0.774138   |   nobody 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.835380   |   whole 
+2  |   similitude: 0.785798   |   bare 
+3  |   similitude: 0.765805   |   skin 
+4  |   similitude: 0.736347   |   simple 
+5  |   similitude: 0.728948   |   fifty 
+6  |   similitude: 0.722980   |   common 
+7  |   similitude: 0.719037   |   three 
+8  |   similitude: 0.712983   |   paces 
+9  |   similitude: 0.701363   |   walls 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.904349   |   sound 
+2  |   similitude: 0.817104   |   field 
+3  |   similitude: 0.786566   |   merry 
+4  |   similitude: 0.780815   |   gloomy 
+5  |   similitude: 0.772907   |   ill 
+6  |   similitude: 0.750452   |   noble 
+7  |   similitude: 0.743803   |   angrily 
+8  |   similitude: 0.736383   |   led 
+9  |   similitude: 0.731557   |   rolled 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.849930   |   fortune 
+2  |   similitude: 0.837495   |   ideas 
+3  |   similitude: 0.836805   |   lendermen 
+4  |   similitude: 0.821916   |   or 
+5  |   similitude: 0.821835   |   jumped 
+6  |   similitude: 0.808403   |   view 
+7  |   similitude: 0.792718   |   surface 
+8  |   similitude: 0.764625   |   corpse 
+9  |   similitude: 0.753263   |   doors 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.828246   |   pair 
+2  |   similitude: 0.818716   |   eyes 
+3  |   similitude: 0.809711   |   faces 
+4  |   similitude: 0.804808   |   men 
+5  |   similitude: 0.790476   |   movements 
+6  |   similitude: 0.771744   |   part 
+7  |   similitude: 0.771496   |   fields 
+8  |   similitude: 0.742528   |   gentleman 
+9  |   similitude: 0.731697   |   generals 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.797091   |   act 
+2  |   similitude: 0.790626   |   small 
+3  |   similitude: 0.768162   |   danger 
+4  |   similitude: 0.751621   |   covering 
+5  |   similitude: 0.737399   |   teeth 
+6  |   similitude: 0.735752   |   cold 
+7  |   similitude: 0.716883   |   voices 
+8  |   similitude: 0.714524   |   leaving 
+9  |   similitude: 0.713250   |   perfect 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.873326   |   setting 
+2  |   similitude: 0.835104   |   suffering 
+3  |   similitude: 0.824282   |   possessed 
+4  |   similitude: 0.802613   |   holding 
+5  |   similitude: 0.802409   |   highest 
+6  |   similitude: 0.798456   |   killed 
+7  |   similitude: 0.790795   |   started 
+8  |   similitude: 0.769479   |   sleeping 
+9  |   similitude: 0.769371   |   forced 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.934026   |   girl 
+2  |   similitude: 0.869298   |   soul 
+3  |   similitude: 0.812985   |   wife 
+4  |   similitude: 0.779621   |   power 
+5  |   similitude: 0.756036   |   returning 
+6  |   similitude: 0.754090   |   fire 
+7  |   similitude: 0.730832   |   bold 
+8  |   similitude: 0.728272   |   message 
+9  |   similitude: 0.715549   |   daughter 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.909248   |   distant 
+2  |   similitude: 0.855406   |   wearing 
+3  |   similitude: 0.849515   |   growing 
+4  |   similitude: 0.824781   |   fine 
+5  |   similitude: 0.817290   |   thence 
+6  |   similitude: 0.762734   |   double 
+7  |   similitude: 0.762712   |   single 
+8  |   similitude: 0.756901   |   dangerous 
+9  |   similitude: 0.750224   |   others 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.858804   |   hours 
+2  |   similitude: 0.781946   |   nature 
+3  |   similitude: 0.731745   |   events 
+4  |   similitude: 0.724693   |   may 
+5  |   similitude: 0.703929   |   persons 
+6  |   similitude: 0.702396   |   why 
+7  |   similitude: 0.695856   |   beings 
+8  |   similitude: 0.676948   |   trees 
+9  |   similitude: 0.670642   |   what 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.950737   |   away 
+2  |   similitude: 0.819283   |   sofa 
+3  |   similitude: 0.801745   |   off 
+4  |   similitude: 0.786990   |   return 
+5  |   similitude: 0.786934   |   happen 
+6  |   similitude: 0.778927   |   apart 
+7  |   similitude: 0.778281   |   eastward 
+8  |   similitude: 0.769590   |   north 
+9  |   similitude: 0.731537   |   east 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.824282   |   more 
+2  |   similitude: 0.805068   |   looking 
+3  |   similitude: 0.784922   |   didn 
+4  |   similitude: 0.747142   |   laughing 
+5  |   similitude: 0.729426   |   as 
+6  |   similitude: 0.724049   |   very 
+7  |   similitude: 0.717695   |   friendly 
+8  |   similitude: 0.699450   |   sorts 
+9  |   similitude: 0.688328   |   commander 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.717326   |   proved 
+2  |   similitude: 0.711089   |   liked 
+3  |   similitude: 0.693148   |   no 
+4  |   similitude: 0.684709   |   ve 
+5  |   similitude: 0.678072   |   its 
+6  |   similitude: 0.665746   |   made 
+7  |   similitude: 0.659038   |   everybody 
+8  |   similitude: 0.658355   |   mere 
+9  |   similitude: 0.656791   |   happened 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.883809   |   make 
+2  |   similitude: 0.852881   |   choose 
+3  |   similitude: 0.842096   |   avoid 
+4  |   similitude: 0.835359   |   serve 
+5  |   similitude: 0.824392   |   consider 
+6  |   similitude: 0.805026   |   believe 
+7  |   similitude: 0.789966   |   looked 
+8  |   similitude: 0.779004   |   shows 
+9  |   similitude: 0.768619   |   am 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  inf  |  weights True
+Black_list: <unk>
+1908295
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+16:31:15.045517  |  Epoch 1  |  Training loss 5.13251
+16:32:14.550137  |  Epoch 5  |  Training loss 4.17660
+16:33:28.927088  |  Epoch 10  |  Training loss 4.10085
+16:34:42.993557  |  Epoch 15  |  Training loss 4.07436
+16:35:57.272833  |  Epoch 20  |  Training loss 4.06032
+16:37:11.420384  |  Epoch 25  |  Training loss 4.05193
+16:38:25.603125  |  Epoch 30  |  Training loss 4.04669
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.23492
+Validation
+Accuracy: 0.23175
+Training
+Accuracy: 0.23492
+Validation
+Accuracy: 0.23175
+Test
+Accuracy: 0.23680
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.677346   |   your 
+2  |   similitude: 0.655771   |   minutes 
+3  |   similitude: 0.655158   |   two 
+4  |   similitude: 0.623555   |   these 
+5  |   similitude: 0.614292   |   social 
+6  |   similitude: 0.610247   |   its 
+7  |   similitude: 0.605965   |   heads 
+8  |   similitude: 0.601886   |   yes 
+9  |   similitude: 0.601155   |   a 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.859816   |   ground 
+2  |   similitude: 0.789641   |   street 
+3  |   similitude: 0.786928   |   entrance 
+4  |   similitude: 0.779103   |   group 
+5  |   similitude: 0.754656   |   frost 
+6  |   similitude: 0.747462   |   luck 
+7  |   similitude: 0.720618   |   ease 
+8  |   similitude: 0.718383   |   floor 
+9  |   similitude: 0.717167   |   barricade 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.839800   |   woman 
+2  |   similitude: 0.829298   |   lady 
+3  |   similitude: 0.825754   |   train 
+4  |   similitude: 0.815449   |   running 
+5  |   similitude: 0.814681   |   mouth 
+6  |   similitude: 0.811779   |   nobody 
+7  |   similitude: 0.798728   |   horses 
+8  |   similitude: 0.797683   |   misery 
+9  |   similitude: 0.787339   |   gardener 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.865332   |   common 
+2  |   similitude: 0.820356   |   bare 
+3  |   similitude: 0.814906   |   whole 
+4  |   similitude: 0.757388   |   married 
+5  |   similitude: 0.756780   |   skin 
+6  |   similitude: 0.752855   |   respect 
+7  |   similitude: 0.740472   |   red 
+8  |   similitude: 0.716133   |   wild 
+9  |   similitude: 0.707213   |   variety 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.856966   |   real 
+2  |   similitude: 0.825477   |   bell 
+3  |   similitude: 0.813414   |   gloomy 
+4  |   similitude: 0.769776   |   month 
+5  |   similitude: 0.750516   |   ill 
+6  |   similitude: 0.747095   |   grave 
+7  |   similitude: 0.746795   |   yellow 
+8  |   similitude: 0.743714   |   message 
+9  |   similitude: 0.723412   |   old 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.790632   |   or 
+2  |   similitude: 0.703732   |   thy 
+3  |   similitude: 0.700208   |   charming 
+4  |   similitude: 0.698051   |   several 
+5  |   similitude: 0.667890   |   keeping 
+6  |   similitude: 0.658198   |   women 
+7  |   similitude: 0.654753   |   none 
+8  |   similitude: 0.651027   |   stopped 
+9  |   similitude: 0.647446   |   called 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.861972   |   men 
+2  |   similitude: 0.852103   |   faces 
+3  |   similitude: 0.767359   |   pair 
+4  |   similitude: 0.731571   |   part 
+5  |   similitude: 0.726835   |   quick 
+6  |   similitude: 0.720518   |   upper 
+7  |   similitude: 0.712317   |   movements 
+8  |   similitude: 0.711518   |   larger 
+9  |   similitude: 0.710494   |   gun 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.851707   |   small 
+2  |   similitude: 0.777302   |   fifteen 
+3  |   similitude: 0.761409   |   board 
+4  |   similitude: 0.759297   |   dress 
+5  |   similitude: 0.748403   |   thirty 
+6  |   similitude: 0.744091   |   voices 
+7  |   similitude: 0.738069   |   time 
+8  |   similitude: 0.726107   |   fields 
+9  |   similitude: 0.720141   |   activity 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.933634   |   officers 
+2  |   similitude: 0.923905   |   infantry 
+3  |   similitude: 0.912293   |   highest 
+4  |   similitude: 0.902013   |   regiment 
+5  |   similitude: 0.874297   |   hearts 
+6  |   similitude: 0.868744   |   nature 
+7  |   similitude: 0.863130   |   leaves 
+8  |   similitude: 0.861699   |   dog 
+9  |   similitude: 0.845981   |   occasion 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.811354   |   cloak 
+2  |   similitude: 0.802284   |   linen 
+3  |   similitude: 0.801192   |   colonel 
+4  |   similitude: 0.788937   |   girl 
+5  |   similitude: 0.772388   |   confusion 
+6  |   similitude: 0.767906   |   cavalry 
+7  |   similitude: 0.754869   |   woman 
+8  |   similitude: 0.753322   |   wound 
+9  |   similitude: 0.753250   |   army 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.879385   |   distant 
+2  |   similitude: 0.855399   |   fine 
+3  |   similitude: 0.837026   |   five 
+4  |   similitude: 0.832127   |   considerable 
+5  |   similitude: 0.827900   |   mysterious 
+6  |   similitude: 0.816218   |   thence 
+7  |   similitude: 0.810536   |   absence 
+8  |   similitude: 0.807397   |   growing 
+9  |   similitude: 0.793032   |   thousand 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.768289   |   mon 
+2  |   similitude: 0.747193   |   feet 
+3  |   similitude: 0.725119   |   motionless 
+4  |   similitude: 0.715264   |   fond 
+5  |   similitude: 0.685347   |   wounds 
+6  |   similitude: 0.683183   |   whilst 
+7  |   similitude: 0.661337   |   minutes 
+8  |   similitude: 0.651420   |   weeks 
+9  |   similitude: 0.648244   |   smoke 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.916154   |   away 
+2  |   similitude: 0.897176   |   o 
+3  |   similitude: 0.823767   |   relations 
+4  |   similitude: 0.808552   |   excellency 
+5  |   similitude: 0.784328   |   off 
+6  |   similitude: 0.780949   |   heap 
+7  |   similitude: 0.774153   |   t 
+8  |   similitude: 0.771952   |   shoulders 
+9  |   similitude: 0.753085   |   return 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.812621   |   society 
+2  |   similitude: 0.785773   |   friendly 
+3  |   similitude: 0.759358   |   ear 
+4  |   similitude: 0.757275   |   write 
+5  |   similitude: 0.744409   |   looking 
+6  |   similitude: 0.732287   |   familiar 
+7  |   similitude: 0.729867   |   nonsense 
+8  |   similitude: 0.714794   |   eight 
+9  |   similitude: 0.701126   |   race 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.808244   |   learn 
+2  |   similitude: 0.775642   |   proved 
+3  |   similitude: 0.773557   |   bring 
+4  |   similitude: 0.771650   |   would 
+5  |   similitude: 0.769297   |   made 
+6  |   similitude: 0.763425   |   join 
+7  |   similitude: 0.757087   |   know 
+8  |   similitude: 0.730953   |   shall 
+9  |   similitude: 0.729090   |   ask 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.862162   |   choose 
+2  |   similitude: 0.854184   |   serve 
+3  |   similitude: 0.852085   |   avoid 
+4  |   similitude: 0.849834   |   mean 
+5  |   similitude: 0.841140   |   kill 
+6  |   similitude: 0.840463   |   consider 
+7  |   similitude: 0.837216   |   make 
+8  |   similitude: 0.826196   |   send 
+9  |   similitude: 0.821806   |   receive 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  inf  |  weights True
+Black_list: <unk> | , | . | ! | ? | "
+1652533
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+16:39:37.492026  |  Epoch 1  |  Training loss 5.39893
+16:40:29.981794  |  Epoch 5  |  Training loss 4.35500
+16:41:34.046434  |  Epoch 10  |  Training loss 4.26518
+16:42:38.333186  |  Epoch 15  |  Training loss 4.23607
+16:43:42.424220  |  Epoch 20  |  Training loss 4.22057
+16:44:46.526316  |  Epoch 25  |  Training loss 4.21060
+16:45:50.879017  |  Epoch 30  |  Training loss 4.20368
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.22220
+Validation
+Accuracy: 0.21747
+Training
+Accuracy: 0.22220
+Validation
+Accuracy: 0.21747
+Test
+Accuracy: 0.21965
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.704118   |   city 
+2  |   similitude: 0.693754   |   your 
+3  |   similitude: 0.668443   |   an 
+4  |   similitude: 0.662333   |   police 
+5  |   similitude: 0.647251   |   bottom 
+6  |   similitude: 0.639974   |   heads 
+7  |   similitude: 0.636838   |   its 
+8  |   similitude: 0.636746   |   these 
+9  |   similitude: 0.626673   |   faces 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.892966   |   ground 
+2  |   similitude: 0.861656   |   entrance 
+3  |   similitude: 0.787671   |   group 
+4  |   similitude: 0.780538   |   street 
+5  |   similitude: 0.778285   |   sea 
+6  |   similitude: 0.767901   |   brow 
+7  |   similitude: 0.767465   |   fire 
+8  |   similitude: 0.745790   |   east 
+9  |   similitude: 0.741314   |   luck 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.883087   |   running 
+2  |   similitude: 0.864764   |   woman 
+3  |   similitude: 0.854974   |   flew 
+4  |   similitude: 0.847042   |   train 
+5  |   similitude: 0.845669   |   mouth 
+6  |   similitude: 0.844207   |   nobody 
+7  |   similitude: 0.838436   |   sort 
+8  |   similitude: 0.827298   |   subject 
+9  |   similitude: 0.818354   |   lady 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.832728   |   common 
+2  |   similitude: 0.802028   |   bare 
+3  |   similitude: 0.795105   |   skin 
+4  |   similitude: 0.770296   |   whole 
+5  |   similitude: 0.738026   |   red 
+6  |   similitude: 0.726401   |   wild 
+7  |   similitude: 0.724748   |   respect 
+8  |   similitude: 0.724083   |   ears 
+9  |   similitude: 0.708529   |   three 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.863008   |   cavalry 
+2  |   similitude: 0.814158   |   confusion 
+3  |   similitude: 0.808878   |   gloomy 
+4  |   similitude: 0.775395   |   noble 
+5  |   similitude: 0.766959   |   message 
+6  |   similitude: 0.766431   |   colonel 
+7  |   similitude: 0.760922   |   fancy 
+8  |   similitude: 0.760765   |   merry 
+9  |   similitude: 0.759883   |   town 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.833700   |   jumped 
+2  |   similitude: 0.739408   |   or 
+3  |   similitude: 0.724210   |   will 
+4  |   similitude: 0.697977   |   ideas 
+5  |   similitude: 0.693999   |   view 
+6  |   similitude: 0.684432   |   keeping 
+7  |   similitude: 0.670581   |   sleep 
+8  |   similitude: 0.663304   |   several 
+9  |   similitude: 0.662054   |   call 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.849558   |   men 
+2  |   similitude: 0.821347   |   faces 
+3  |   similitude: 0.783937   |   movements 
+4  |   similitude: 0.750277   |   pair 
+5  |   similitude: 0.748820   |   part 
+6  |   similitude: 0.743368   |   heart 
+7  |   similitude: 0.721761   |   account 
+8  |   similitude: 0.685320   |   work 
+9  |   similitude: 0.677190   |   joy 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.791456   |   small 
+2  |   similitude: 0.779504   |   danger 
+3  |   similitude: 0.773932   |   fields 
+4  |   similitude: 0.767213   |   especially 
+5  |   similitude: 0.766071   |   result 
+6  |   similitude: 0.754597   |   leaving 
+7  |   similitude: 0.743708   |   crossing 
+8  |   similitude: 0.740158   |   act 
+9  |   similitude: 0.708748   |   dress 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.890836   |   infantry 
+2  |   similitude: 0.861991   |   suffering 
+3  |   similitude: 0.838842   |   highest 
+4  |   similitude: 0.831970   |   started 
+5  |   similitude: 0.797745   |   regiment 
+6  |   similitude: 0.780234   |   occasion 
+7  |   similitude: 0.773230   |   setting 
+8  |   similitude: 0.773070   |   officers 
+9  |   similitude: 0.738783   |   porch 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.934369   |   girl 
+2  |   similitude: 0.825415   |   colonel 
+3  |   similitude: 0.819328   |   message 
+4  |   similitude: 0.790085   |   convent 
+5  |   similitude: 0.788366   |   soul 
+6  |   similitude: 0.782930   |   servants 
+7  |   similitude: 0.780205   |   cat 
+8  |   similitude: 0.753345   |   creature 
+9  |   similitude: 0.735388   |   soldier 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.884861   |   distant 
+2  |   similitude: 0.844065   |   others 
+3  |   similitude: 0.838670   |   growing 
+4  |   similitude: 0.818568   |   single 
+5  |   similitude: 0.809433   |   thence 
+6  |   similitude: 0.808277   |   le 
+7  |   similitude: 0.782191   |   fine 
+8  |   similitude: 0.746206   |   some 
+9  |   similitude: 0.734205   |   thousand 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.768712   |   hours 
+2  |   similitude: 0.746392   |   nature 
+3  |   similitude: 0.740930   |   friend 
+4  |   similitude: 0.737822   |   rooms 
+5  |   similitude: 0.729935   |   why 
+6  |   similitude: 0.727762   |   weeks 
+7  |   similitude: 0.719612   |   harm 
+8  |   similitude: 0.703740   |   beings 
+9  |   similitude: 0.679762   |   we 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.933247   |   forward 
+2  |   similitude: 0.914864   |   side 
+3  |   similitude: 0.906889   |   up 
+4  |   similitude: 0.862347   |   apart 
+5  |   similitude: 0.861120   |   possession 
+6  |   similitude: 0.859687   |   back 
+7  |   similitude: 0.832201   |   itself 
+8  |   similitude: 0.819138   |   eastward 
+9  |   similitude: 0.806071   |   tone 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.784929   |   importance 
+2  |   similitude: 0.784721   |   more 
+3  |   similitude: 0.780595   |   friendly 
+4  |   similitude: 0.769743   |   nonsense 
+5  |   similitude: 0.736189   |   particularly 
+6  |   similitude: 0.730396   |   looking 
+7  |   similitude: 0.726291   |   happens 
+8  |   similitude: 0.716573   |   answer 
+9  |   similitude: 0.704790   |   eight 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.876545   |   ve 
+2  |   similitude: 0.780034   |   re 
+3  |   similitude: 0.719648   |   shall 
+4  |   similitude: 0.718206   |   she 
+5  |   similitude: 0.702944   |   begin 
+6  |   similitude: 0.670958   |   it 
+7  |   similitude: 0.635553   |   proceed 
+8  |   similitude: 0.635151   |   finally 
+9  |   similitude: 0.629363   |   whom 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.826053   |   didn 
+2  |   similitude: 0.803551   |   am 
+3  |   similitude: 0.801660   |   get 
+4  |   similitude: 0.795503   |   die 
+5  |   similitude: 0.777423   |   choose 
+6  |   similitude: 0.761481   |   receive 
+7  |   similitude: 0.761375   |   serve 
+8  |   similitude: 0.746582   |   avoid 
+9  |   similitude: 0.738330   |   make 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  inf  |  weights False
+Black_list: <unk>
+1908295
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+16:46:57.213314  |  Epoch 1  |  Training loss 5.09926
+16:47:56.835440  |  Epoch 5  |  Training loss 4.14470
+16:49:17.240060  |  Epoch 10  |  Training loss 4.06873
+16:50:31.651162  |  Epoch 15  |  Training loss 4.04175
+16:51:45.688072  |  Epoch 20  |  Training loss 4.02678
+16:52:59.998682  |  Epoch 25  |  Training loss 4.01759
+16:54:15.517049  |  Epoch 30  |  Training loss 4.01173
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.23598
+Validation
+Accuracy: 0.23300
+Training
+Accuracy: 0.23598
+Validation
+Accuracy: 0.23300
+Test
+Accuracy: 0.23722
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.677123   |   your 
+2  |   similitude: 0.667158   |   two 
+3  |   similitude: 0.627554   |   minutes 
+4  |   similitude: 0.621184   |   social 
+5  |   similitude: 0.614512   |   a 
+6  |   similitude: 0.613160   |   these 
+7  |   similitude: 0.607949   |   yes 
+8  |   similitude: 0.607139   |   heads 
+9  |   similitude: 0.604690   |   its 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.859261   |   ground 
+2  |   similitude: 0.793723   |   entrance 
+3  |   similitude: 0.776184   |   street 
+4  |   similitude: 0.752237   |   group 
+5  |   similitude: 0.740058   |   frost 
+6  |   similitude: 0.722549   |   floor 
+7  |   similitude: 0.715165   |   luck 
+8  |   similitude: 0.710549   |   barricade 
+9  |   similitude: 0.709315   |   land 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.870995   |   mouth 
+2  |   similitude: 0.840042   |   woman 
+3  |   similitude: 0.839043   |   lady 
+4  |   similitude: 0.822552   |   nobody 
+5  |   similitude: 0.817939   |   train 
+6  |   similitude: 0.807505   |   gardener 
+7  |   similitude: 0.805989   |   horses 
+8  |   similitude: 0.803887   |   misery 
+9  |   similitude: 0.792451   |   understood 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.852688   |   common 
+2  |   similitude: 0.830608   |   bare 
+3  |   similitude: 0.820532   |   whole 
+4  |   similitude: 0.780159   |   skin 
+5  |   similitude: 0.755781   |   married 
+6  |   similitude: 0.754184   |   respect 
+7  |   similitude: 0.743496   |   red 
+8  |   similitude: 0.722705   |   variety 
+9  |   similitude: 0.717523   |   simple 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.868496   |   real 
+2  |   similitude: 0.818417   |   bell 
+3  |   similitude: 0.789458   |   month 
+4  |   similitude: 0.789250   |   gloomy 
+5  |   similitude: 0.754625   |   old 
+6  |   similitude: 0.740636   |   highest 
+7  |   similitude: 0.739659   |   yellow 
+8  |   similitude: 0.735084   |   message 
+9  |   similitude: 0.734335   |   grave 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.782245   |   or 
+2  |   similitude: 0.717606   |   charming 
+3  |   similitude: 0.714035   |   thy 
+4  |   similitude: 0.707578   |   several 
+5  |   similitude: 0.693110   |   none 
+6  |   similitude: 0.672170   |   keeping 
+7  |   similitude: 0.670345   |   stopped 
+8  |   similitude: 0.668851   |   women 
+9  |   similitude: 0.663145   |   called 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.866795   |   men 
+2  |   similitude: 0.862576   |   faces 
+3  |   similitude: 0.745203   |   pair 
+4  |   similitude: 0.726823   |   upper 
+5  |   similitude: 0.723580   |   part 
+6  |   similitude: 0.710419   |   quick 
+7  |   similitude: 0.706964   |   larger 
+8  |   similitude: 0.705863   |   movements 
+9  |   similitude: 0.694299   |   inside 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.856068   |   small 
+2  |   similitude: 0.782837   |   fifteen 
+3  |   similitude: 0.750092   |   board 
+4  |   similitude: 0.749837   |   thirty 
+5  |   similitude: 0.743834   |   dress 
+6  |   similitude: 0.742641   |   fields 
+7  |   similitude: 0.738441   |   voices 
+8  |   similitude: 0.737089   |   time 
+9  |   similitude: 0.723768   |   affair 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.924697   |   officers 
+2  |   similitude: 0.923228   |   infantry 
+3  |   similitude: 0.915783   |   highest 
+4  |   similitude: 0.907907   |   regiment 
+5  |   similitude: 0.885147   |   hearts 
+6  |   similitude: 0.878518   |   nature 
+7  |   similitude: 0.859577   |   leaves 
+8  |   similitude: 0.857607   |   breast 
+9  |   similitude: 0.847794   |   dog 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.813405   |   cloak 
+2  |   similitude: 0.791262   |   colonel 
+3  |   similitude: 0.789810   |   linen 
+4  |   similitude: 0.784667   |   girl 
+5  |   similitude: 0.758056   |   wound 
+6  |   similitude: 0.746766   |   cavalry 
+7  |   similitude: 0.739011   |   woman 
+8  |   similitude: 0.734045   |   confusion 
+9  |   similitude: 0.732718   |   army 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.851216   |   others 
+2  |   similitude: 0.841063   |   distant 
+3  |   similitude: 0.838643   |   five 
+4  |   similitude: 0.823138   |   fine 
+5  |   similitude: 0.813862   |   absence 
+6  |   similitude: 0.809524   |   growing 
+7  |   similitude: 0.807798   |   single 
+8  |   similitude: 0.802848   |   thence 
+9  |   similitude: 0.777352   |   considerable 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.780526   |   mon 
+2  |   similitude: 0.756363   |   feet 
+3  |   similitude: 0.717040   |   whilst 
+4  |   similitude: 0.715987   |   fond 
+5  |   similitude: 0.683860   |   wounds 
+6  |   similitude: 0.682644   |   motionless 
+7  |   similitude: 0.666793   |   but 
+8  |   similitude: 0.657284   |   weeks 
+9  |   similitude: 0.657040   |   minutes 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.884706   |   away 
+2  |   similitude: 0.881082   |   o 
+3  |   similitude: 0.804203   |   relations 
+4  |   similitude: 0.797530   |   shoulders 
+5  |   similitude: 0.797123   |   off 
+6  |   similitude: 0.794546   |   excellency 
+7  |   similitude: 0.788121   |   notice 
+8  |   similitude: 0.742345   |   suffer 
+9  |   similitude: 0.738569   |   heap 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.798845   |   society 
+2  |   similitude: 0.781504   |   friendly 
+3  |   similitude: 0.770990   |   ear 
+4  |   similitude: 0.770908   |   write 
+5  |   similitude: 0.764180   |   looking 
+6  |   similitude: 0.740372   |   eight 
+7  |   similitude: 0.730094   |   familiar 
+8  |   similitude: 0.706295   |   splendid 
+9  |   similitude: 0.701936   |   wooden 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.800072   |   learn 
+2  |   similitude: 0.754627   |   bring 
+3  |   similitude: 0.754115   |   proved 
+4  |   similitude: 0.753270   |   join 
+5  |   similitude: 0.748047   |   would 
+6  |   similitude: 0.733763   |   know 
+7  |   similitude: 0.732759   |   happened 
+8  |   similitude: 0.726052   |   once 
+9  |   similitude: 0.723045   |   grow 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.876540   |   mean 
+2  |   similitude: 0.868979   |   serve 
+3  |   similitude: 0.867639   |   send 
+4  |   similitude: 0.860972   |   choose 
+5  |   similitude: 0.856843   |   make 
+6  |   similitude: 0.849785   |   avoid 
+7  |   similitude: 0.833422   |   want 
+8  |   similitude: 0.831537   |   consider 
+9  |   similitude: 0.831362   |   kill 
+===========================================================
+Context size  2  |  Embedding dim  12  |  occ_max  inf  |  weights False
+Black_list: <unk> | , | . | ! | ? | "
+1652533
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+16:55:27.596033  |  Epoch 1  |  Training loss 5.37822
+16:56:19.047192  |  Epoch 5  |  Training loss 4.33338
+16:57:23.170600  |  Epoch 10  |  Training loss 4.24393
+16:58:27.268116  |  Epoch 15  |  Training loss 4.21496
+16:59:31.276332  |  Epoch 20  |  Training loss 4.19944
+17:00:35.299404  |  Epoch 25  |  Training loss 4.18938
+17:01:39.354504  |  Epoch 30  |  Training loss 4.18239
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.22197
+Validation
+Accuracy: 0.21659
+Training
+Accuracy: 0.22197
+Validation
+Accuracy: 0.21659
+Test
+Accuracy: 0.21941
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.701177   |   city 
+2  |   similitude: 0.696530   |   your 
+3  |   similitude: 0.670097   |   an 
+4  |   similitude: 0.662380   |   police 
+5  |   similitude: 0.649420   |   bottom 
+6  |   similitude: 0.643756   |   heads 
+7  |   similitude: 0.639562   |   these 
+8  |   similitude: 0.638338   |   its 
+9  |   similitude: 0.623200   |   re 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.891940   |   ground 
+2  |   similitude: 0.857076   |   entrance 
+3  |   similitude: 0.801645   |   group 
+4  |   similitude: 0.777988   |   sea 
+5  |   similitude: 0.777610   |   street 
+6  |   similitude: 0.768367   |   brow 
+7  |   similitude: 0.759258   |   fire 
+8  |   similitude: 0.741278   |   luck 
+9  |   similitude: 0.741124   |   east 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.881740   |   running 
+2  |   similitude: 0.872720   |   sort 
+3  |   similitude: 0.863578   |   woman 
+4  |   similitude: 0.854495   |   flew 
+5  |   similitude: 0.851148   |   mouth 
+6  |   similitude: 0.849334   |   train 
+7  |   similitude: 0.839489   |   nobody 
+8  |   similitude: 0.829025   |   subject 
+9  |   similitude: 0.819796   |   lady 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.840126   |   common 
+2  |   similitude: 0.803822   |   bare 
+3  |   similitude: 0.789555   |   skin 
+4  |   similitude: 0.775187   |   whole 
+5  |   similitude: 0.739514   |   red 
+6  |   similitude: 0.733683   |   ears 
+7  |   similitude: 0.733140   |   wild 
+8  |   similitude: 0.723822   |   respect 
+9  |   similitude: 0.710240   |   three 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.865013   |   cavalry 
+2  |   similitude: 0.815151   |   confusion 
+3  |   similitude: 0.808712   |   gloomy 
+4  |   similitude: 0.772866   |   noble 
+5  |   similitude: 0.766779   |   merry 
+6  |   similitude: 0.765528   |   colonel 
+7  |   similitude: 0.762422   |   fact 
+8  |   similitude: 0.760175   |   message 
+9  |   similitude: 0.757889   |   town 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.833506   |   jumped 
+2  |   similitude: 0.737014   |   or 
+3  |   similitude: 0.722436   |   will 
+4  |   similitude: 0.689732   |   ideas 
+5  |   similitude: 0.686455   |   view 
+6  |   similitude: 0.685661   |   keeping 
+7  |   similitude: 0.666413   |   sleep 
+8  |   similitude: 0.665702   |   several 
+9  |   similitude: 0.656044   |   call 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.849004   |   men 
+2  |   similitude: 0.813221   |   faces 
+3  |   similitude: 0.782190   |   movements 
+4  |   similitude: 0.756889   |   pair 
+5  |   similitude: 0.746817   |   part 
+6  |   similitude: 0.740848   |   heart 
+7  |   similitude: 0.717249   |   account 
+8  |   similitude: 0.679756   |   work 
+9  |   similitude: 0.676350   |   joy 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.801816   |   small 
+2  |   similitude: 0.778517   |   especially 
+3  |   similitude: 0.773152   |   fields 
+4  |   similitude: 0.766399   |   danger 
+5  |   similitude: 0.760681   |   result 
+6  |   similitude: 0.747000   |   leaving 
+7  |   similitude: 0.744884   |   act 
+8  |   similitude: 0.738668   |   crossing 
+9  |   similitude: 0.711154   |   dress 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.896876   |   infantry 
+2  |   similitude: 0.864203   |   suffering 
+3  |   similitude: 0.848337   |   highest 
+4  |   similitude: 0.830153   |   started 
+5  |   similitude: 0.813130   |   regiment 
+6  |   similitude: 0.792754   |   occasion 
+7  |   similitude: 0.791247   |   officers 
+8  |   similitude: 0.766280   |   setting 
+9  |   similitude: 0.743698   |   bright 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.932153   |   girl 
+2  |   similitude: 0.830369   |   colonel 
+3  |   similitude: 0.817711   |   message 
+4  |   similitude: 0.794682   |   soul 
+5  |   similitude: 0.790683   |   convent 
+6  |   similitude: 0.776860   |   servants 
+7  |   similitude: 0.773341   |   cat 
+8  |   similitude: 0.752366   |   creature 
+9  |   similitude: 0.729560   |   stranger 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.886593   |   distant 
+2  |   similitude: 0.842791   |   others 
+3  |   similitude: 0.839804   |   growing 
+4  |   similitude: 0.816882   |   single 
+5  |   similitude: 0.812335   |   le 
+6  |   similitude: 0.809999   |   thence 
+7  |   similitude: 0.789563   |   fine 
+8  |   similitude: 0.747559   |   some 
+9  |   similitude: 0.738880   |   thousand 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.770323   |   hours 
+2  |   similitude: 0.744316   |   friend 
+3  |   similitude: 0.739348   |   rooms 
+4  |   similitude: 0.736810   |   nature 
+5  |   similitude: 0.731505   |   why 
+6  |   similitude: 0.726824   |   weeks 
+7  |   similitude: 0.721788   |   harm 
+8  |   similitude: 0.702170   |   beings 
+9  |   similitude: 0.680222   |   we 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.933857   |   forward 
+2  |   similitude: 0.916389   |   side 
+3  |   similitude: 0.908210   |   up 
+4  |   similitude: 0.863588   |   apart 
+5  |   similitude: 0.862555   |   back 
+6  |   similitude: 0.862257   |   possession 
+7  |   similitude: 0.822839   |   itself 
+8  |   similitude: 0.821107   |   eastward 
+9  |   similitude: 0.805176   |   tone 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.791991   |   more 
+2  |   similitude: 0.776612   |   friendly 
+3  |   similitude: 0.773595   |   nonsense 
+4  |   similitude: 0.762380   |   importance 
+5  |   similitude: 0.738804   |   particularly 
+6  |   similitude: 0.735469   |   looking 
+7  |   similitude: 0.725644   |   happens 
+8  |   similitude: 0.720229   |   answer 
+9  |   similitude: 0.704097   |   eight 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.876427   |   ve 
+2  |   similitude: 0.772981   |   re 
+3  |   similitude: 0.721140   |   shall 
+4  |   similitude: 0.711415   |   she 
+5  |   similitude: 0.697854   |   begin 
+6  |   similitude: 0.667721   |   it 
+7  |   similitude: 0.628963   |   proceed 
+8  |   similitude: 0.624841   |   whom 
+9  |   similitude: 0.621787   |   finally 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.815654   |   didn 
+2  |   similitude: 0.804526   |   get 
+3  |   similitude: 0.802308   |   am 
+4  |   similitude: 0.796413   |   die 
+5  |   similitude: 0.778658   |   choose 
+6  |   similitude: 0.759389   |   serve 
+7  |   similitude: 0.759039   |   receive 
+8  |   similitude: 0.741776   |   avoid 
+9  |   similitude: 0.736234   |   appears 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  10000  |  weights True
+Black_list: <unk>
+1251349
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+17:02:35.412411  |  Epoch 1  |  Training loss 5.94580
+17:03:14.325820  |  Epoch 5  |  Training loss 4.79901
+17:04:02.524171  |  Epoch 10  |  Training loss 4.67205
+17:04:51.581685  |  Epoch 15  |  Training loss 4.62904
+17:05:41.943809  |  Epoch 20  |  Training loss 4.60777
+17:06:31.528746  |  Epoch 25  |  Training loss 4.59442
+17:07:27.615321  |  Epoch 30  |  Training loss 4.58493
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.15645
+Validation
+Accuracy: 0.18018
+Training
+Accuracy: 0.15645
+Validation
+Accuracy: 0.18018
+Test
+Accuracy: 0.16843
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.609975   |   prince 
+2  |   similitude: 0.592876   |   your 
+3  |   similitude: 0.562731   |   their 
+4  |   similitude: 0.560420   |   personal 
+5  |   similitude: 0.540447   |   flank 
+6  |   similitude: 0.531498   |   this 
+7  |   similitude: 0.507838   |   pure 
+8  |   similitude: 0.507214   |   our 
+9  |   similitude: 0.485632   |   ways 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.743247   |   floor 
+2  |   similitude: 0.686788   |   group 
+3  |   similitude: 0.651058   |   despair 
+4  |   similitude: 0.648862   |   bank 
+5  |   similitude: 0.624991   |   bed 
+6  |   similitude: 0.624489   |   height 
+7  |   similitude: 0.622456   |   cavalry 
+8  |   similitude: 0.614923   |   game 
+9  |   similitude: 0.604265   |   forest 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.907753   |   lady 
+2  |   similitude: 0.814479   |   francs 
+3  |   similitude: 0.809155   |   women 
+4  |   similitude: 0.783800   |   epoch 
+5  |   similitude: 0.770730   |   troops 
+6  |   similitude: 0.770286   |   week 
+7  |   similitude: 0.745153   |   commander 
+8  |   similitude: 0.743553   |   moments 
+9  |   similitude: 0.739438   |   anyone 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.704798   |   gloomy 
+2  |   similitude: 0.703583   |   hill 
+3  |   similitude: 0.687194   |   my 
+4  |   similitude: 0.685877   |   field 
+5  |   similitude: 0.673835   |   golden 
+6  |   similitude: 0.667646   |   whose 
+7  |   similitude: 0.636438   |   general 
+8  |   similitude: 0.618699   |   peculiar 
+9  |   similitude: 0.614178   |   knife 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.742852   |   sea 
+2  |   similitude: 0.738470   |   many 
+3  |   similitude: 0.710719   |   cold 
+4  |   similitude: 0.695399   |   glad 
+5  |   similitude: 0.690059   |   whole 
+6  |   similitude: 0.688523   |   freedom 
+7  |   similitude: 0.684516   |   visible 
+8  |   similitude: 0.676908   |   deserted 
+9  |   similitude: 0.663587   |   sort 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.744223   |   badly 
+2  |   similitude: 0.689410   |   impossible 
+3  |   similitude: 0.665065   |   caused 
+4  |   similitude: 0.656451   |   plants 
+5  |   similitude: 0.643761   |   thy 
+6  |   similitude: 0.640026   |   on 
+7  |   similitude: 0.626468   |   required 
+8  |   similitude: 0.624944   |   passed 
+9  |   similitude: 0.621585   |   intelligence 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.863688   |   possession 
+2  |   similitude: 0.796006   |   part 
+3  |   similitude: 0.771831   |   difficulty 
+4  |   similitude: 0.769782   |   number 
+5  |   similitude: 0.737961   |   experience 
+6  |   similitude: 0.733372   |   sign 
+7  |   similitude: 0.728845   |   loss 
+8  |   similitude: 0.719707   |   everyone 
+9  |   similitude: 0.719226   |   force 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.815211   |   nose 
+2  |   similitude: 0.768605   |   ancient 
+3  |   similitude: 0.758542   |   horrible 
+4  |   similitude: 0.748185   |   legs 
+5  |   similitude: 0.741963   |   pair 
+6  |   similitude: 0.719978   |   wonderful 
+7  |   similitude: 0.703227   |   inches 
+8  |   similitude: 0.701245   |   fortune 
+9  |   similitude: 0.699025   |   air 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.778521   |   learned 
+2  |   similitude: 0.720463   |   letter 
+3  |   similitude: 0.717270   |   confidence 
+4  |   similitude: 0.714458   |   aid 
+5  |   similitude: 0.707119   |   path 
+6  |   similitude: 0.673082   |   nearer 
+7  |   similitude: 0.654111   |   rows 
+8  |   similitude: 0.653421   |   past 
+9  |   similitude: 0.652548   |   figure 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.803446   |   success 
+2  |   similitude: 0.801038   |   count 
+3  |   similitude: 0.791975   |   instant 
+4  |   similitude: 0.767440   |   building 
+5  |   similitude: 0.764546   |   sewer 
+6  |   similitude: 0.730660   |   companion 
+7  |   similitude: 0.703304   |   actions 
+8  |   similitude: 0.681581   |   cat 
+9  |   similitude: 0.668494   |   attack 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.827884   |   wedding 
+2  |   similitude: 0.764443   |   doors 
+3  |   similitude: 0.716327   |   first 
+4  |   similitude: 0.698859   |   de 
+5  |   similitude: 0.697061   |   animal 
+6  |   similitude: 0.685852   |   vague 
+7  |   similitude: 0.684421   |   honest 
+8  |   similitude: 0.682193   |   moon 
+9  |   similitude: 0.680225   |   attack 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.747961   |   enormous 
+2  |   similitude: 0.670391   |   besides 
+3  |   similitude: 0.645998   |   collected 
+4  |   similitude: 0.633578   |   isn 
+5  |   similitude: 0.622098   |   assistant 
+6  |   similitude: 0.619038   |   through 
+7  |   similitude: 0.615660   |   fruit 
+8  |   similitude: 0.614482   |   ft 
+9  |   similitude: 0.613943   |   thousand 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.703458   |   notice 
+2  |   similitude: 0.703067   |   along 
+3  |   similitude: 0.698818   |   back 
+4  |   similitude: 0.698431   |   placed 
+5  |   similitude: 0.695892   |   cut 
+6  |   similitude: 0.691922   |   aside 
+7  |   similitude: 0.683953   |   rule 
+8  |   similitude: 0.678197   |   hurt 
+9  |   similitude: 0.672166   |   share 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.735841   |   rise 
+2  |   similitude: 0.728894   |   thee 
+3  |   similitude: 0.705862   |   her 
+4  |   similitude: 0.657526   |   daylight 
+5  |   similitude: 0.624712   |   room 
+6  |   similitude: 0.599176   |   his 
+7  |   similitude: 0.585222   |   itself 
+8  |   similitude: 0.573957   |   street 
+9  |   similitude: 0.571978   |   fire 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.775157   |   understand 
+2  |   similitude: 0.737672   |   grow 
+3  |   similitude: 0.714150   |   would 
+4  |   similitude: 0.703155   |   show 
+5  |   similitude: 0.687989   |   please 
+6  |   similitude: 0.672423   |   cut 
+7  |   similitude: 0.670685   |   notice 
+8  |   similitude: 0.669323   |   committed 
+9  |   similitude: 0.657001   |   cause 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.793925   |   proceed 
+2  |   similitude: 0.747310   |   produce 
+3  |   similitude: 0.740138   |   became 
+4  |   similitude: 0.719609   |   generally 
+5  |   similitude: 0.718370   |   start 
+6  |   similitude: 0.715907   |   collected 
+7  |   similitude: 0.678082   |   been 
+8  |   similitude: 0.668225   |   run 
+9  |   similitude: 0.665747   |   er 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  10000  |  weights True
+Black_list: <unk> | , | . | ! | ? | "
+1213400
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+17:08:24.947953  |  Epoch 1  |  Training loss 5.96937
+17:09:02.454543  |  Epoch 5  |  Training loss 4.80737
+17:09:49.406480  |  Epoch 10  |  Training loss 4.67795
+17:10:36.294229  |  Epoch 15  |  Training loss 4.63468
+17:11:22.896119  |  Epoch 20  |  Training loss 4.61352
+17:12:09.821861  |  Epoch 25  |  Training loss 4.60030
+17:12:56.686537  |  Epoch 30  |  Training loss 4.59064
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.15746
+Validation
+Accuracy: 0.17976
+Training
+Accuracy: 0.15746
+Validation
+Accuracy: 0.17976
+Test
+Accuracy: 0.17541
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.600610   |   ten 
+2  |   similitude: 0.582522   |   four 
+3  |   similitude: 0.580274   |   your 
+4  |   similitude: 0.563542   |   personal 
+5  |   similitude: 0.553790   |   military 
+6  |   similitude: 0.548336   |   this 
+7  |   similitude: 0.540695   |   a 
+8  |   similitude: 0.533267   |   twelve 
+9  |   similitude: 0.505698   |   never 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.742120   |   group 
+2  |   similitude: 0.697526   |   floor 
+3  |   similitude: 0.692919   |   bed 
+4  |   similitude: 0.676148   |   bank 
+5  |   similitude: 0.641934   |   game 
+6  |   similitude: 0.638179   |   ways 
+7  |   similitude: 0.634947   |   forest 
+8  |   similitude: 0.632815   |   effort 
+9  |   similitude: 0.632470   |   person 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.868136   |   lady 
+2  |   similitude: 0.834236   |   francs 
+3  |   similitude: 0.829247   |   women 
+4  |   similitude: 0.805657   |   week 
+5  |   similitude: 0.796847   |   epoch 
+6  |   similitude: 0.786905   |   anyone 
+7  |   similitude: 0.777288   |   troops 
+8  |   similitude: 0.753614   |   others 
+9  |   similitude: 0.733417   |   commander 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.752294   |   gloomy 
+2  |   similitude: 0.736077   |   hill 
+3  |   similitude: 0.665831   |   field 
+4  |   similitude: 0.658564   |   whose 
+5  |   similitude: 0.657238   |   my 
+6  |   similitude: 0.655490   |   main 
+7  |   similitude: 0.645032   |   higher 
+8  |   similitude: 0.643013   |   thousand 
+9  |   similitude: 0.630293   |   merry 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.755862   |   sea 
+2  |   similitude: 0.744989   |   many 
+3  |   similitude: 0.699814   |   visible 
+4  |   similitude: 0.698911   |   deserted 
+5  |   similitude: 0.695606   |   sort 
+6  |   similitude: 0.689382   |   cold 
+7  |   similitude: 0.683228   |   glad 
+8  |   similitude: 0.677221   |   melancholy 
+9  |   similitude: 0.666675   |   case 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.751924   |   badly 
+2  |   similitude: 0.701557   |   impossible 
+3  |   similitude: 0.662302   |   plants 
+4  |   similitude: 0.652105   |   thy 
+5  |   similitude: 0.648552   |   intelligence 
+6  |   similitude: 0.633894   |   required 
+7  |   similitude: 0.625321   |   line 
+8  |   similitude: 0.622991   |   stout 
+9  |   similitude: 0.621750   |   smiling 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.849017   |   possession 
+2  |   similitude: 0.767730   |   part 
+3  |   similitude: 0.725890   |   everyone 
+4  |   similitude: 0.702523   |   difficulty 
+5  |   similitude: 0.694294   |   number 
+6  |   similitude: 0.690946   |   piece 
+7  |   similitude: 0.690609   |   probably 
+8  |   similitude: 0.661634   |   experience 
+9  |   similitude: 0.660605   |   sign 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.825481   |   nose 
+2  |   similitude: 0.792597   |   souls 
+3  |   similitude: 0.760227   |   ancient 
+4  |   similitude: 0.728415   |   pair 
+5  |   similitude: 0.720856   |   horrible 
+6  |   similitude: 0.715494   |   legs 
+7  |   similitude: 0.708104   |   fortune 
+8  |   similitude: 0.688191   |   wonderful 
+9  |   similitude: 0.673202   |   inches 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.743474   |   learned 
+2  |   similitude: 0.733807   |   path 
+3  |   similitude: 0.719063   |   letter 
+4  |   similitude: 0.705053   |   confidence 
+5  |   similitude: 0.693708   |   figure 
+6  |   similitude: 0.687491   |   aid 
+7  |   similitude: 0.679167   |   wide 
+8  |   similitude: 0.657508   |   carefully 
+9  |   similitude: 0.652654   |   past 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.803508   |   count 
+2  |   similitude: 0.788026   |   sewer 
+3  |   similitude: 0.783446   |   building 
+4  |   similitude: 0.768704   |   success 
+5  |   similitude: 0.746079   |   instant 
+6  |   similitude: 0.732329   |   companion 
+7  |   similitude: 0.697076   |   grandfather 
+8  |   similitude: 0.682808   |   bushes 
+9  |   similitude: 0.674898   |   otherwise 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.826399   |   wedding 
+2  |   similitude: 0.734789   |   doors 
+3  |   similitude: 0.713294   |   first 
+4  |   similitude: 0.703987   |   moon 
+5  |   similitude: 0.677932   |   attack 
+6  |   similitude: 0.671738   |   animal 
+7  |   similitude: 0.668807   |   vague 
+8  |   similitude: 0.656713   |   de 
+9  |   similitude: 0.652903   |   army 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.701901   |   aloud 
+2  |   similitude: 0.678479   |   devil 
+3  |   similitude: 0.649753   |   father 
+4  |   similitude: 0.646944   |   perfectly 
+5  |   similitude: 0.612413   |   suppose 
+6  |   similitude: 0.609557   |   asking 
+7  |   similitude: 0.602094   |   maid 
+8  |   similitude: 0.601711   |   results 
+9  |   similitude: 0.601661   |   affairs 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.792979   |   shoulders 
+2  |   similitude: 0.759021   |   tone 
+3  |   similitude: 0.744170   |   side 
+4  |   similitude: 0.737004   |   back 
+5  |   similitude: 0.719876   |   head 
+6  |   similitude: 0.690095   |   share 
+7  |   similitude: 0.660263   |   bench 
+8  |   similitude: 0.653561   |   farm 
+9  |   similitude: 0.650976   |   attention 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.771241   |   thee 
+2  |   similitude: 0.770949   |   rise 
+3  |   similitude: 0.666566   |   mean 
+4  |   similitude: 0.628732   |   her 
+5  |   similitude: 0.605595   |   expect 
+6  |   similitude: 0.603287   |   sat 
+7  |   similitude: 0.599298   |   stepped 
+8  |   similitude: 0.599137   |   wish 
+9  |   similitude: 0.582923   |   hastened 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.788012   |   understand 
+2  |   similitude: 0.761485   |   grow 
+3  |   similitude: 0.753191   |   show 
+4  |   similitude: 0.717736   |   would 
+5  |   similitude: 0.699701   |   notice 
+6  |   similitude: 0.676034   |   please 
+7  |   similitude: 0.675445   |   recognize 
+8  |   similitude: 0.672090   |   retreat 
+9  |   similitude: 0.667860   |   add 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.744910   |   proceed 
+2  |   similitude: 0.705355   |   produce 
+3  |   similitude: 0.697956   |   generally 
+4  |   similitude: 0.675101   |   er 
+5  |   similitude: 0.668314   |   collected 
+6  |   similitude: 0.662965   |   hardy 
+7  |   similitude: 0.658144   |   start 
+8  |   similitude: 0.657753   |   became 
+9  |   similitude: 0.651614   |   sprang 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  10000  |  weights False
+Black_list: <unk>
+1251349
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+17:13:46.122456  |  Epoch 1  |  Training loss 5.94023
+17:14:26.990316  |  Epoch 5  |  Training loss 4.79355
+17:15:16.661766  |  Epoch 10  |  Training loss 4.66650
+17:16:05.070014  |  Epoch 15  |  Training loss 4.62356
+17:16:53.500778  |  Epoch 20  |  Training loss 4.60229
+17:17:41.876493  |  Epoch 25  |  Training loss 4.58897
+17:18:30.204591  |  Epoch 30  |  Training loss 4.57949
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.15663
+Validation
+Accuracy: 0.18260
+Training
+Accuracy: 0.15663
+Validation
+Accuracy: 0.18260
+Test
+Accuracy: 0.17113
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.610141   |   prince 
+2  |   similitude: 0.594184   |   your 
+3  |   similitude: 0.563799   |   their 
+4  |   similitude: 0.559029   |   personal 
+5  |   similitude: 0.540267   |   flank 
+6  |   similitude: 0.531313   |   this 
+7  |   similitude: 0.509907   |   pure 
+8  |   similitude: 0.508359   |   our 
+9  |   similitude: 0.486985   |   ways 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.746063   |   floor 
+2  |   similitude: 0.682674   |   group 
+3  |   similitude: 0.649248   |   despair 
+4  |   similitude: 0.645174   |   bank 
+5  |   similitude: 0.626012   |   height 
+6  |   similitude: 0.621501   |   cavalry 
+7  |   similitude: 0.621466   |   bed 
+8  |   similitude: 0.614744   |   game 
+9  |   similitude: 0.605475   |   forest 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.908544   |   lady 
+2  |   similitude: 0.813265   |   francs 
+3  |   similitude: 0.807646   |   women 
+4  |   similitude: 0.784631   |   epoch 
+5  |   similitude: 0.769769   |   troops 
+6  |   similitude: 0.768365   |   week 
+7  |   similitude: 0.743741   |   moments 
+8  |   similitude: 0.743697   |   commander 
+9  |   similitude: 0.736473   |   anyone 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.703946   |   hill 
+2  |   similitude: 0.703615   |   gloomy 
+3  |   similitude: 0.686904   |   my 
+4  |   similitude: 0.686398   |   field 
+5  |   similitude: 0.676359   |   golden 
+6  |   similitude: 0.667821   |   whose 
+7  |   similitude: 0.638317   |   general 
+8  |   similitude: 0.619205   |   peculiar 
+9  |   similitude: 0.615285   |   knife 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.743439   |   sea 
+2  |   similitude: 0.740122   |   many 
+3  |   similitude: 0.712793   |   cold 
+4  |   similitude: 0.694470   |   glad 
+5  |   similitude: 0.691669   |   whole 
+6  |   similitude: 0.687247   |   freedom 
+7  |   similitude: 0.684164   |   visible 
+8  |   similitude: 0.678123   |   deserted 
+9  |   similitude: 0.663171   |   sort 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.744998   |   badly 
+2  |   similitude: 0.688570   |   impossible 
+3  |   similitude: 0.663987   |   caused 
+4  |   similitude: 0.657078   |   plants 
+5  |   similitude: 0.643903   |   thy 
+6  |   similitude: 0.639994   |   on 
+7  |   similitude: 0.625827   |   required 
+8  |   similitude: 0.625403   |   passed 
+9  |   similitude: 0.622222   |   intelligence 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.862689   |   possession 
+2  |   similitude: 0.795593   |   part 
+3  |   similitude: 0.773623   |   number 
+4  |   similitude: 0.773015   |   difficulty 
+5  |   similitude: 0.739490   |   experience 
+6  |   similitude: 0.733258   |   sign 
+7  |   similitude: 0.729553   |   loss 
+8  |   similitude: 0.719964   |   everyone 
+9  |   similitude: 0.719462   |   force 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.815733   |   nose 
+2  |   similitude: 0.769430   |   ancient 
+3  |   similitude: 0.759178   |   horrible 
+4  |   similitude: 0.747579   |   legs 
+5  |   similitude: 0.740689   |   pair 
+6  |   similitude: 0.719599   |   wonderful 
+7  |   similitude: 0.704106   |   inches 
+8  |   similitude: 0.702013   |   fortune 
+9  |   similitude: 0.696711   |   air 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.778316   |   learned 
+2  |   similitude: 0.721097   |   letter 
+3  |   similitude: 0.718567   |   confidence 
+4  |   similitude: 0.714295   |   aid 
+5  |   similitude: 0.705685   |   path 
+6  |   similitude: 0.672287   |   nearer 
+7  |   similitude: 0.653713   |   rows 
+8  |   similitude: 0.652905   |   past 
+9  |   similitude: 0.650661   |   figure 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.803087   |   success 
+2  |   similitude: 0.799575   |   count 
+3  |   similitude: 0.796889   |   instant 
+4  |   similitude: 0.767787   |   building 
+5  |   similitude: 0.764032   |   sewer 
+6  |   similitude: 0.729918   |   companion 
+7  |   similitude: 0.701885   |   actions 
+8  |   similitude: 0.685041   |   cat 
+9  |   similitude: 0.668059   |   attack 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.828195   |   wedding 
+2  |   similitude: 0.767247   |   doors 
+3  |   similitude: 0.717485   |   first 
+4  |   similitude: 0.695906   |   de 
+5  |   similitude: 0.694731   |   animal 
+6  |   similitude: 0.687042   |   vague 
+7  |   similitude: 0.683307   |   honest 
+8  |   similitude: 0.682024   |   moon 
+9  |   similitude: 0.677509   |   attack 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.752397   |   enormous 
+2  |   similitude: 0.670495   |   besides 
+3  |   similitude: 0.645818   |   collected 
+4  |   similitude: 0.633395   |   isn 
+5  |   similitude: 0.623016   |   assistant 
+6  |   similitude: 0.618070   |   through 
+7  |   similitude: 0.617572   |   fruit 
+8  |   similitude: 0.614534   |   ft 
+9  |   similitude: 0.613249   |   thousand 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.704057   |   along 
+2  |   similitude: 0.703493   |   notice 
+3  |   similitude: 0.700318   |   placed 
+4  |   similitude: 0.699090   |   back 
+5  |   similitude: 0.696180   |   cut 
+6  |   similitude: 0.693631   |   aside 
+7  |   similitude: 0.683831   |   rule 
+8  |   similitude: 0.677298   |   hurt 
+9  |   similitude: 0.672769   |   share 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.737293   |   rise 
+2  |   similitude: 0.728218   |   thee 
+3  |   similitude: 0.706487   |   her 
+4  |   similitude: 0.660691   |   daylight 
+5  |   similitude: 0.626716   |   room 
+6  |   similitude: 0.600252   |   his 
+7  |   similitude: 0.586827   |   itself 
+8  |   similitude: 0.576287   |   fire 
+9  |   similitude: 0.575380   |   street 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.774117   |   understand 
+2  |   similitude: 0.735907   |   grow 
+3  |   similitude: 0.714005   |   would 
+4  |   similitude: 0.702486   |   show 
+5  |   similitude: 0.686482   |   please 
+6  |   similitude: 0.672749   |   cut 
+7  |   similitude: 0.670086   |   committed 
+8  |   similitude: 0.669760   |   notice 
+9  |   similitude: 0.655017   |   cause 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.795981   |   proceed 
+2  |   similitude: 0.747227   |   produce 
+3  |   similitude: 0.741024   |   became 
+4  |   similitude: 0.719963   |   start 
+5  |   similitude: 0.719162   |   generally 
+6  |   similitude: 0.715816   |   collected 
+7  |   similitude: 0.680315   |   been 
+8  |   similitude: 0.669719   |   run 
+9  |   similitude: 0.667022   |   er 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  10000  |  weights False
+Black_list: <unk> | , | . | ! | ? | "
+1213400
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+17:19:26.125467  |  Epoch 1  |  Training loss 5.96479
+17:20:03.628815  |  Epoch 5  |  Training loss 4.80273
+17:20:51.331481  |  Epoch 10  |  Training loss 4.67322
+17:21:38.386073  |  Epoch 15  |  Training loss 4.62998
+17:22:25.260852  |  Epoch 20  |  Training loss 4.60885
+17:23:12.137268  |  Epoch 25  |  Training loss 4.59562
+17:23:59.005065  |  Epoch 30  |  Training loss 4.58596
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.15747
+Validation
+Accuracy: 0.18084
+Training
+Accuracy: 0.15747
+Validation
+Accuracy: 0.18084
+Test
+Accuracy: 0.17743
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.602829   |   ten 
+2  |   similitude: 0.584635   |   four 
+3  |   similitude: 0.580624   |   your 
+4  |   similitude: 0.562598   |   personal 
+5  |   similitude: 0.556145   |   military 
+6  |   similitude: 0.547364   |   this 
+7  |   similitude: 0.540959   |   a 
+8  |   similitude: 0.534574   |   twelve 
+9  |   similitude: 0.506141   |   never 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.740999   |   group 
+2  |   similitude: 0.701060   |   floor 
+3  |   similitude: 0.691682   |   bed 
+4  |   similitude: 0.674301   |   bank 
+5  |   similitude: 0.640441   |   game 
+6  |   similitude: 0.637329   |   ways 
+7  |   similitude: 0.635896   |   forest 
+8  |   similitude: 0.633253   |   line 
+9  |   similitude: 0.632060   |   despair 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.867654   |   lady 
+2  |   similitude: 0.834128   |   francs 
+3  |   similitude: 0.828884   |   women 
+4  |   similitude: 0.806114   |   week 
+5  |   similitude: 0.797690   |   epoch 
+6  |   similitude: 0.786664   |   anyone 
+7  |   similitude: 0.778434   |   troops 
+8  |   similitude: 0.753080   |   others 
+9  |   similitude: 0.734145   |   commander 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.751742   |   gloomy 
+2  |   similitude: 0.737598   |   hill 
+3  |   similitude: 0.667012   |   field 
+4  |   similitude: 0.659006   |   whose 
+5  |   similitude: 0.658873   |   main 
+6  |   similitude: 0.656682   |   my 
+7  |   similitude: 0.651174   |   higher 
+8  |   similitude: 0.644499   |   thousand 
+9  |   similitude: 0.629415   |   merry 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.757250   |   sea 
+2  |   similitude: 0.743763   |   many 
+3  |   similitude: 0.698957   |   visible 
+4  |   similitude: 0.698939   |   deserted 
+5  |   similitude: 0.696585   |   sort 
+6  |   similitude: 0.690718   |   cold 
+7  |   similitude: 0.682978   |   glad 
+8  |   similitude: 0.676059   |   melancholy 
+9  |   similitude: 0.666955   |   case 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.752484   |   badly 
+2  |   similitude: 0.701497   |   impossible 
+3  |   similitude: 0.662506   |   plants 
+4  |   similitude: 0.652878   |   thy 
+5  |   similitude: 0.648910   |   intelligence 
+6  |   similitude: 0.633232   |   required 
+7  |   similitude: 0.624804   |   line 
+8  |   similitude: 0.622866   |   stout 
+9  |   similitude: 0.622333   |   smiling 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.848456   |   possession 
+2  |   similitude: 0.767367   |   part 
+3  |   similitude: 0.725802   |   everyone 
+4  |   similitude: 0.701130   |   difficulty 
+5  |   similitude: 0.696521   |   number 
+6  |   similitude: 0.692110   |   piece 
+7  |   similitude: 0.689065   |   probably 
+8  |   similitude: 0.662060   |   experience 
+9  |   similitude: 0.660070   |   sign 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.824767   |   nose 
+2  |   similitude: 0.792174   |   souls 
+3  |   similitude: 0.760392   |   ancient 
+4  |   similitude: 0.727519   |   pair 
+5  |   similitude: 0.720147   |   horrible 
+6  |   similitude: 0.714679   |   legs 
+7  |   similitude: 0.708013   |   fortune 
+8  |   similitude: 0.686699   |   wonderful 
+9  |   similitude: 0.672790   |   inches 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.742632   |   learned 
+2  |   similitude: 0.733766   |   path 
+3  |   similitude: 0.718747   |   letter 
+4  |   similitude: 0.705244   |   confidence 
+5  |   similitude: 0.693495   |   figure 
+6  |   similitude: 0.686456   |   aid 
+7  |   similitude: 0.679090   |   wide 
+8  |   similitude: 0.656722   |   carefully 
+9  |   similitude: 0.652694   |   past 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.803236   |   count 
+2  |   similitude: 0.787872   |   sewer 
+3  |   similitude: 0.783412   |   building 
+4  |   similitude: 0.769517   |   success 
+5  |   similitude: 0.750120   |   instant 
+6  |   similitude: 0.730715   |   companion 
+7  |   similitude: 0.697087   |   grandfather 
+8  |   similitude: 0.681865   |   bushes 
+9  |   similitude: 0.674209   |   otherwise 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.826598   |   wedding 
+2  |   similitude: 0.736868   |   doors 
+3  |   similitude: 0.713990   |   first 
+4  |   similitude: 0.705155   |   moon 
+5  |   similitude: 0.677613   |   attack 
+6  |   similitude: 0.671417   |   animal 
+7  |   similitude: 0.669784   |   vague 
+8  |   similitude: 0.656400   |   de 
+9  |   similitude: 0.652439   |   army 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.699992   |   aloud 
+2  |   similitude: 0.676424   |   devil 
+3  |   similitude: 0.648585   |   perfectly 
+4  |   similitude: 0.648446   |   father 
+5  |   similitude: 0.610521   |   suppose 
+6  |   similitude: 0.608145   |   asking 
+7  |   similitude: 0.602208   |   affairs 
+8  |   similitude: 0.601539   |   maid 
+9  |   similitude: 0.599636   |   results 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.793031   |   shoulders 
+2  |   similitude: 0.758554   |   tone 
+3  |   similitude: 0.745541   |   side 
+4  |   similitude: 0.737958   |   back 
+5  |   similitude: 0.719933   |   head 
+6  |   similitude: 0.691370   |   share 
+7  |   similitude: 0.661396   |   bench 
+8  |   similitude: 0.654830   |   farm 
+9  |   similitude: 0.650079   |   attention 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.772454   |   thee 
+2  |   similitude: 0.770872   |   rise 
+3  |   similitude: 0.668739   |   mean 
+4  |   similitude: 0.628707   |   her 
+5  |   similitude: 0.606795   |   expect 
+6  |   similitude: 0.602243   |   wish 
+7  |   similitude: 0.602082   |   sat 
+8  |   similitude: 0.599984   |   stepped 
+9  |   similitude: 0.582229   |   hastened 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.787983   |   understand 
+2  |   similitude: 0.761865   |   grow 
+3  |   similitude: 0.753440   |   show 
+4  |   similitude: 0.718263   |   would 
+5  |   similitude: 0.700439   |   notice 
+6  |   similitude: 0.677018   |   recognize 
+7  |   similitude: 0.675301   |   please 
+8  |   similitude: 0.672105   |   retreat 
+9  |   similitude: 0.668623   |   add 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.747129   |   proceed 
+2  |   similitude: 0.706601   |   produce 
+3  |   similitude: 0.698691   |   generally 
+4  |   similitude: 0.675182   |   er 
+5  |   similitude: 0.669641   |   collected 
+6  |   similitude: 0.660881   |   hardy 
+7  |   similitude: 0.659626   |   start 
+8  |   similitude: 0.657553   |   became 
+9  |   similitude: 0.652723   |   sprang 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  inf  |  weights True
+Black_list: <unk>
+1908295
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+17:24:59.234478  |  Epoch 1  |  Training loss 4.98728
+17:26:05.368469  |  Epoch 5  |  Training loss 3.98983
+17:27:20.209057  |  Epoch 10  |  Training loss 3.90776
+17:28:34.910583  |  Epoch 15  |  Training loss 3.88114
+17:29:49.742443  |  Epoch 20  |  Training loss 3.86749
+17:31:04.491845  |  Epoch 25  |  Training loss 3.85857
+17:32:19.260993  |  Epoch 30  |  Training loss 3.85236
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.25887
+Validation
+Accuracy: 0.25407
+Training
+Accuracy: 0.25887
+Validation
+Accuracy: 0.25407
+Test
+Accuracy: 0.25829
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.655642   |   four 
+2  |   similitude: 0.653694   |   ten 
+3  |   similitude: 0.617055   |   your 
+4  |   similitude: 0.573922   |   a 
+5  |   similitude: 0.568682   |   several 
+6  |   similitude: 0.557953   |   his 
+7  |   similitude: 0.550760   |   military 
+8  |   similitude: 0.540439   |   most 
+9  |   similitude: 0.527826   |   police 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.711989   |   floor 
+2  |   similitude: 0.688912   |   bodies 
+3  |   similitude: 0.675068   |   regard 
+4  |   similitude: 0.658636   |   anger 
+5  |   similitude: 0.653822   |   person 
+6  |   similitude: 0.651839   |   evening 
+7  |   similitude: 0.639436   |   strange 
+8  |   similitude: 0.629072   |   grave 
+9  |   similitude: 0.625181   |   ceased 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.895660   |   lady 
+2  |   similitude: 0.846720   |   cat 
+3  |   similitude: 0.737241   |   walk 
+4  |   similitude: 0.724115   |   bird 
+5  |   similitude: 0.709830   |   woman 
+6  |   similitude: 0.706247   |   muttered 
+7  |   similitude: 0.677827   |   month 
+8  |   similitude: 0.674186   |   who 
+9  |   similitude: 0.669517   |   creature 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.811578   |   hill 
+2  |   similitude: 0.789976   |   gloomy 
+3  |   similitude: 0.767071   |   peculiar 
+4  |   similitude: 0.764537   |   chair 
+5  |   similitude: 0.759822   |   form 
+6  |   similitude: 0.754611   |   husband 
+7  |   similitude: 0.745939   |   knife 
+8  |   similitude: 0.739910   |   fingers 
+9  |   similitude: 0.736993   |   ears 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.728559   |   sea 
+2  |   similitude: 0.709321   |   small 
+3  |   similitude: 0.703749   |   cold 
+4  |   similitude: 0.698169   |   visible 
+5  |   similitude: 0.696772   |   rose 
+6  |   similitude: 0.690209   |   thanks 
+7  |   similitude: 0.676903   |   many 
+8  |   similitude: 0.655554   |   large 
+9  |   similitude: 0.637955   |   clock 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.748255   |   badly 
+2  |   similitude: 0.736566   |   le 
+3  |   similitude: 0.687166   |   impossible 
+4  |   similitude: 0.682781   |   caused 
+5  |   similitude: 0.678457   |   required 
+6  |   similitude: 0.623813   |   simple 
+7  |   similitude: 0.619266   |   stout 
+8  |   similitude: 0.615677   |   thy 
+9  |   similitude: 0.609394   |   passed 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.802962   |   respect 
+2  |   similitude: 0.795228   |   number 
+3  |   similitude: 0.772605   |   appearance 
+4  |   similitude: 0.763596   |   joy 
+5  |   similitude: 0.754793   |   play 
+6  |   similitude: 0.744347   |   everyone 
+7  |   similitude: 0.740711   |   dwarf 
+8  |   similitude: 0.738219   |   miles 
+9  |   similitude: 0.723515   |   destiny 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.780678   |   seeds 
+2  |   similitude: 0.777193   |   horrible 
+3  |   similitude: 0.772146   |   ancient 
+4  |   similitude: 0.748869   |   souls 
+5  |   similitude: 0.730318   |   ideas 
+6  |   similitude: 0.718180   |   length 
+7  |   similitude: 0.706248   |   nose 
+8  |   similitude: 0.701515   |   moving 
+9  |   similitude: 0.698703   |   frightened 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.750295   |   letter 
+2  |   similitude: 0.718840   |   learned 
+3  |   similitude: 0.704016   |   disappeared 
+4  |   similitude: 0.685139   |   blue 
+5  |   similitude: 0.680990   |   nearer 
+6  |   similitude: 0.678750   |   feast 
+7  |   similitude: 0.665676   |   aid 
+8  |   similitude: 0.661064   |   immense 
+9  |   similitude: 0.657866   |   gentlemen 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.811866   |   instant 
+2  |   similitude: 0.743662   |   month 
+3  |   similitude: 0.696184   |   success 
+4  |   similitude: 0.687930   |   woman 
+5  |   similitude: 0.680350   |   surprised 
+6  |   similitude: 0.677855   |   building 
+7  |   similitude: 0.672054   |   moment 
+8  |   similitude: 0.665870   |   sewer 
+9  |   similitude: 0.664954   |   companion 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.861556   |   doors 
+2  |   similitude: 0.844704   |   wedding 
+3  |   similitude: 0.739832   |   clothes 
+4  |   similitude: 0.729515   |   ground 
+5  |   similitude: 0.716269   |   moon 
+6  |   similitude: 0.702589   |   animal 
+7  |   similitude: 0.661841   |   troops 
+8  |   similitude: 0.644326   |   expedition 
+9  |   similitude: 0.644050   |   influence 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.791720   |   promised 
+2  |   similitude: 0.761198   |   indeed 
+3  |   similitude: 0.726904   |   enormous 
+4  |   similitude: 0.718599   |   appears 
+5  |   similitude: 0.701082   |   concealed 
+6  |   similitude: 0.694279   |   devil 
+7  |   similitude: 0.675334   |   thence 
+8  |   similitude: 0.674060   |   besides 
+9  |   similitude: 0.665352   |   ended 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.747089   |   share 
+2  |   similitude: 0.739802   |   sense 
+3  |   similitude: 0.712752   |   sign 
+4  |   similitude: 0.711426   |   side 
+5  |   similitude: 0.684511   |   drive 
+6  |   similitude: 0.684508   |   falling 
+7  |   similitude: 0.684207   |   sight 
+8  |   similitude: 0.682482   |   air 
+9  |   similitude: 0.681868   |   point 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.696506   |   thee 
+2  |   similitude: 0.678097   |   affairs 
+3  |   similitude: 0.652192   |   fire 
+4  |   similitude: 0.634957   |   room 
+5  |   similitude: 0.630439   |   itself 
+6  |   similitude: 0.607944   |   rise 
+7  |   similitude: 0.598501   |   hurry 
+8  |   similitude: 0.595375   |   society 
+9  |   similitude: 0.594447   |   method 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.775054   |   would 
+2  |   similitude: 0.746575   |   perhaps 
+3  |   similitude: 0.689680   |   cut 
+4  |   similitude: 0.689051   |   stepped 
+5  |   similitude: 0.677749   |   showing 
+6  |   similitude: 0.656926   |   placed 
+7  |   similitude: 0.643037   |   be 
+8  |   similitude: 0.623962   |   may 
+9  |   similitude: 0.622674   |   even 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.866550   |   proceed 
+2  |   similitude: 0.777065   |   became 
+3  |   similitude: 0.772321   |   start 
+4  |   similitude: 0.764923   |   sprang 
+5  |   similitude: 0.741522   |   placed 
+6  |   similitude: 0.731065   |   er 
+7  |   similitude: 0.693681   |   produce 
+8  |   similitude: 0.665430   |   offer 
+9  |   similitude: 0.651710   |   mistake 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  inf  |  weights True
+Black_list: <unk> | , | . | ! | ? | "
+1652533
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+17:33:31.074952  |  Epoch 1  |  Training loss 5.24653
+17:34:23.989153  |  Epoch 5  |  Training loss 4.16601
+17:35:28.497892  |  Epoch 10  |  Training loss 4.06809
+17:36:33.089024  |  Epoch 15  |  Training loss 4.03671
+17:37:37.691907  |  Epoch 20  |  Training loss 4.02118
+17:38:42.232670  |  Epoch 25  |  Training loss 4.01154
+17:39:46.626310  |  Epoch 30  |  Training loss 4.00487
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.24378
+Validation
+Accuracy: 0.23745
+Training
+Accuracy: 0.24378
+Validation
+Accuracy: 0.23745
+Test
+Accuracy: 0.23908
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.758428   |   several 
+2  |   similitude: 0.753726   |   ten 
+3  |   similitude: 0.629155   |   twelve 
+4  |   similitude: 0.626368   |   four 
+5  |   similitude: 0.562346   |   which 
+6  |   similitude: 0.560051   |   this 
+7  |   similitude: 0.558502   |   hot 
+8  |   similitude: 0.547200   |   size 
+9  |   similitude: 0.544817   |   whether 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.748673   |   floor 
+2  |   similitude: 0.711650   |   pure 
+3  |   similitude: 0.681398   |   bell 
+4  |   similitude: 0.673082   |   regard 
+5  |   similitude: 0.671018   |   anger 
+6  |   similitude: 0.665603   |   strange 
+7  |   similitude: 0.653866   |   trench 
+8  |   similitude: 0.643397   |   walls 
+9  |   similitude: 0.636806   |   effort 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.907397   |   lady 
+2  |   similitude: 0.829285   |   women 
+3  |   similitude: 0.821403   |   cat 
+4  |   similitude: 0.795865   |   anyone 
+5  |   similitude: 0.791360   |   epoch 
+6  |   similitude: 0.775622   |   francs 
+7  |   similitude: 0.751271   |   week 
+8  |   similitude: 0.748872   |   moments 
+9  |   similitude: 0.745261   |   girl 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.785868   |   hill 
+2  |   similitude: 0.766484   |   form 
+3  |   similitude: 0.751989   |   main 
+4  |   similitude: 0.738370   |   field 
+5  |   similitude: 0.737466   |   gloomy 
+6  |   similitude: 0.715887   |   cellar 
+7  |   similitude: 0.707500   |   stone 
+8  |   similitude: 0.702249   |   thousand 
+9  |   similitude: 0.689478   |   golden 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.746202   |   cold 
+2  |   similitude: 0.728807   |   thanks 
+3  |   similitude: 0.727398   |   sea 
+4  |   similitude: 0.724209   |   visible 
+5  |   similitude: 0.685479   |   case 
+6  |   similitude: 0.666788   |   thin 
+7  |   similitude: 0.644320   |   dress 
+8  |   similitude: 0.640969   |   begin 
+9  |   similitude: 0.639201   |   glad 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.746130   |   badly 
+2  |   similitude: 0.674447   |   impossible 
+3  |   similitude: 0.657263   |   thy 
+4  |   similitude: 0.638592   |   le 
+5  |   similitude: 0.633969   |   required 
+6  |   similitude: 0.619172   |   simple 
+7  |   similitude: 0.613968   |   stout 
+8  |   similitude: 0.599061   |   much 
+9  |   similitude: 0.593089   |   on 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.812967   |   following 
+2  |   similitude: 0.754746   |   minute 
+3  |   similitude: 0.743929   |   bit 
+4  |   similitude: 0.715610   |   sort 
+5  |   similitude: 0.710296   |   perfect 
+6  |   similitude: 0.698269   |   eight 
+7  |   similitude: 0.680738   |   shield 
+8  |   similitude: 0.678212   |   level 
+9  |   similitude: 0.664521   |   wet 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.779948   |   seeds 
+2  |   similitude: 0.773647   |   ancient 
+3  |   similitude: 0.755116   |   nose 
+4  |   similitude: 0.753350   |   ideas 
+5  |   similitude: 0.750609   |   horrible 
+6  |   similitude: 0.733947   |   moving 
+7  |   similitude: 0.728979   |   souls 
+8  |   similitude: 0.709193   |   fortune 
+9  |   similitude: 0.702097   |   frightened 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.736018   |   learned 
+2  |   similitude: 0.729618   |   letter 
+3  |   similitude: 0.685186   |   gradually 
+4  |   similitude: 0.671857   |   nearer 
+5  |   similitude: 0.661252   |   wonderful 
+6  |   similitude: 0.654978   |   path 
+7  |   similitude: 0.645109   |   past 
+8  |   similitude: 0.641366   |   rising 
+9  |   similitude: 0.640555   |   somewhat 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.774248   |   month 
+2  |   similitude: 0.761931   |   woman 
+3  |   similitude: 0.753796   |   instant 
+4  |   similitude: 0.714114   |   gardener 
+5  |   similitude: 0.709098   |   moment 
+6  |   similitude: 0.684641   |   sewer 
+7  |   similitude: 0.681197   |   grandfather 
+8  |   similitude: 0.681114   |   companion 
+9  |   similitude: 0.661055   |   agreement 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.868101   |   doors 
+2  |   similitude: 0.805132   |   wedding 
+3  |   similitude: 0.745569   |   clothes 
+4  |   similitude: 0.712207   |   troops 
+5  |   similitude: 0.707869   |   those 
+6  |   similitude: 0.701233   |   moon 
+7  |   similitude: 0.697872   |   ground 
+8  |   similitude: 0.687494   |   vague 
+9  |   similitude: 0.638869   |   autumn 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.694832   |   perfectly 
+2  |   similitude: 0.675429   |   will 
+3  |   similitude: 0.665474   |   should 
+4  |   similitude: 0.618641   |   certainly 
+5  |   similitude: 0.604548   |   - 
+6  |   similitude: 0.586107   |   generally 
+7  |   similitude: 0.583593   |   father 
+8  |   similitude: 0.581199   |   comrades 
+9  |   similitude: 0.574185   |   affairs 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.750486   |   escape 
+2  |   similitude: 0.744738   |   inn 
+3  |   similitude: 0.718972   |   cut 
+4  |   similitude: 0.709096   |   sense 
+5  |   similitude: 0.708176   |   answer 
+6  |   similitude: 0.707993   |   sign 
+7  |   similitude: 0.699754   |   along 
+8  |   similitude: 0.693773   |   use 
+9  |   similitude: 0.691613   |   conceal 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.734719   |   thee 
+2  |   similitude: 0.664410   |   rise 
+3  |   similitude: 0.656852   |   expect 
+4  |   similitude: 0.648535   |   o 
+5  |   similitude: 0.602956   |   itself 
+6  |   similitude: 0.596848   |   mean 
+7  |   similitude: 0.580175   |   considerable 
+8  |   similitude: 0.576980   |   stepped 
+9  |   similitude: 0.554901   |   six 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.773093   |   would 
+2  |   similitude: 0.754588   |   committed 
+3  |   similitude: 0.688695   |   sign 
+4  |   similitude: 0.685417   |   be 
+5  |   similitude: 0.669576   |   grow 
+6  |   similitude: 0.663299   |   understand 
+7  |   similitude: 0.649457   |   please 
+8  |   similitude: 0.643436   |   cut 
+9  |   similitude: 0.641968   |   not 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.827675   |   proceed 
+2  |   similitude: 0.745460   |   start 
+3  |   similitude: 0.720561   |   produce 
+4  |   similitude: 0.718022   |   sprang 
+5  |   similitude: 0.713123   |   finally 
+6  |   similitude: 0.699460   |   remains 
+7  |   similitude: 0.689337   |   generally 
+8  |   similitude: 0.685417   |   have 
+9  |   similitude: 0.653246   |   mistake 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  inf  |  weights False
+Black_list: <unk>
+1908295
+35120
+76525
+   Current parameters: 
+lr = 0.001
+
+17:40:53.931807  |  Epoch 1  |  Training loss 4.95398
+17:41:54.477758  |  Epoch 5  |  Training loss 3.95753
+17:43:10.477821  |  Epoch 10  |  Training loss 3.87602
+17:44:29.535084  |  Epoch 15  |  Training loss 3.84955
+17:45:43.812355  |  Epoch 20  |  Training loss 3.83616
+17:46:58.146570  |  Epoch 25  |  Training loss 3.82741
+17:48:16.067580  |  Epoch 30  |  Training loss 3.82135
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.25914
+Validation
+Accuracy: 0.25393
+Training
+Accuracy: 0.25914
+Validation
+Accuracy: 0.25393
+Test
+Accuracy: 0.25886
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.658428   |   four 
+2  |   similitude: 0.653184   |   ten 
+3  |   similitude: 0.618322   |   your 
+4  |   similitude: 0.581120   |   a 
+5  |   similitude: 0.570550   |   several 
+6  |   similitude: 0.560937   |   his 
+7  |   similitude: 0.551929   |   military 
+8  |   similitude: 0.539879   |   most 
+9  |   similitude: 0.533575   |   police 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.707571   |   floor 
+2  |   similitude: 0.688999   |   bodies 
+3  |   similitude: 0.676118   |   regard 
+4  |   similitude: 0.661079   |   anger 
+5  |   similitude: 0.655292   |   person 
+6  |   similitude: 0.653978   |   evening 
+7  |   similitude: 0.638936   |   strange 
+8  |   similitude: 0.627479   |   ceased 
+9  |   similitude: 0.625212   |   grave 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.895382   |   lady 
+2  |   similitude: 0.849223   |   cat 
+3  |   similitude: 0.736281   |   walk 
+4  |   similitude: 0.733084   |   bird 
+5  |   similitude: 0.709658   |   woman 
+6  |   similitude: 0.704218   |   muttered 
+7  |   similitude: 0.680094   |   who 
+8  |   similitude: 0.676411   |   month 
+9  |   similitude: 0.668841   |   creature 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.814948   |   hill 
+2  |   similitude: 0.795529   |   gloomy 
+3  |   similitude: 0.766881   |   peculiar 
+4  |   similitude: 0.765843   |   chair 
+5  |   similitude: 0.761727   |   form 
+6  |   similitude: 0.753761   |   husband 
+7  |   similitude: 0.748968   |   knife 
+8  |   similitude: 0.739546   |   fingers 
+9  |   similitude: 0.738696   |   ears 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.728985   |   sea 
+2  |   similitude: 0.707225   |   small 
+3  |   similitude: 0.704788   |   cold 
+4  |   similitude: 0.699730   |   rose 
+5  |   similitude: 0.695293   |   visible 
+6  |   similitude: 0.685779   |   thanks 
+7  |   similitude: 0.680365   |   many 
+8  |   similitude: 0.659100   |   large 
+9  |   similitude: 0.645519   |   clock 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.750273   |   badly 
+2  |   similitude: 0.734698   |   le 
+3  |   similitude: 0.687002   |   impossible 
+4  |   similitude: 0.681470   |   caused 
+5  |   similitude: 0.673820   |   required 
+6  |   similitude: 0.621910   |   simple 
+7  |   similitude: 0.619762   |   stout 
+8  |   similitude: 0.609974   |   thy 
+9  |   similitude: 0.609922   |   intelligence 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.805882   |   respect 
+2  |   similitude: 0.788448   |   number 
+3  |   similitude: 0.768099   |   appearance 
+4  |   similitude: 0.762042   |   joy 
+5  |   similitude: 0.749396   |   play 
+6  |   similitude: 0.744963   |   everyone 
+7  |   similitude: 0.741163   |   dwarf 
+8  |   similitude: 0.733596   |   miles 
+9  |   similitude: 0.719537   |   destiny 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.788622   |   seeds 
+2  |   similitude: 0.779528   |   horrible 
+3  |   similitude: 0.774106   |   ancient 
+4  |   similitude: 0.754807   |   souls 
+5  |   similitude: 0.729927   |   ideas 
+6  |   similitude: 0.722836   |   length 
+7  |   similitude: 0.712200   |   nose 
+8  |   similitude: 0.703242   |   moving 
+9  |   similitude: 0.702202   |   frightened 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.751397   |   letter 
+2  |   similitude: 0.727054   |   learned 
+3  |   similitude: 0.706299   |   disappeared 
+4  |   similitude: 0.691037   |   blue 
+5  |   similitude: 0.684783   |   nearer 
+6  |   similitude: 0.680014   |   feast 
+7  |   similitude: 0.668457   |   aid 
+8  |   similitude: 0.659965   |   immense 
+9  |   similitude: 0.656842   |   gentlemen 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.814196   |   instant 
+2  |   similitude: 0.743220   |   month 
+3  |   similitude: 0.696799   |   success 
+4  |   similitude: 0.692229   |   woman 
+5  |   similitude: 0.685521   |   surprised 
+6  |   similitude: 0.680586   |   building 
+7  |   similitude: 0.676899   |   moment 
+8  |   similitude: 0.668633   |   sewer 
+9  |   similitude: 0.665845   |   companion 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.861537   |   doors 
+2  |   similitude: 0.845306   |   wedding 
+3  |   similitude: 0.742121   |   clothes 
+4  |   similitude: 0.728433   |   ground 
+5  |   similitude: 0.723505   |   moon 
+6  |   similitude: 0.704774   |   animal 
+7  |   similitude: 0.657152   |   troops 
+8  |   similitude: 0.646652   |   expedition 
+9  |   similitude: 0.641521   |   truth 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.787217   |   promised 
+2  |   similitude: 0.763563   |   indeed 
+3  |   similitude: 0.723633   |   enormous 
+4  |   similitude: 0.719113   |   appears 
+5  |   similitude: 0.701506   |   concealed 
+6  |   similitude: 0.689822   |   devil 
+7  |   similitude: 0.679991   |   besides 
+8  |   similitude: 0.671223   |   thence 
+9  |   similitude: 0.665595   |   ft 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.741838   |   share 
+2  |   similitude: 0.725632   |   sense 
+3  |   similitude: 0.705417   |   side 
+4  |   similitude: 0.704250   |   sign 
+5  |   similitude: 0.695005   |   falling 
+6  |   similitude: 0.682306   |   drive 
+7  |   similitude: 0.681582   |   sight 
+8  |   similitude: 0.680926   |   air 
+9  |   similitude: 0.680141   |   point 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.691844   |   thee 
+2  |   similitude: 0.673012   |   affairs 
+3  |   similitude: 0.652724   |   fire 
+4  |   similitude: 0.633483   |   room 
+5  |   similitude: 0.626273   |   itself 
+6  |   similitude: 0.606933   |   method 
+7  |   similitude: 0.599580   |   hurry 
+8  |   similitude: 0.595112   |   rise 
+9  |   similitude: 0.591857   |   society 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.775776   |   would 
+2  |   similitude: 0.747588   |   perhaps 
+3  |   similitude: 0.695177   |   stepped 
+4  |   similitude: 0.691193   |   cut 
+5  |   similitude: 0.675437   |   showing 
+6  |   similitude: 0.656597   |   placed 
+7  |   similitude: 0.635854   |   be 
+8  |   similitude: 0.625264   |   grow 
+9  |   similitude: 0.618902   |   even 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.867839   |   proceed 
+2  |   similitude: 0.781620   |   became 
+3  |   similitude: 0.769872   |   start 
+4  |   similitude: 0.768397   |   sprang 
+5  |   similitude: 0.742729   |   placed 
+6  |   similitude: 0.737320   |   er 
+7  |   similitude: 0.690125   |   produce 
+8  |   similitude: 0.666074   |   offer 
+9  |   similitude: 0.649885   |   bent 
+===========================================================
+Context size  2  |  Embedding dim  16  |  occ_max  inf  |  weights False
+Black_list: <unk> | , | . | ! | ? | "
+1652533
+30685
+64961
+   Current parameters: 
+lr = 0.001
+
+17:49:29.444475  |  Epoch 1  |  Training loss 5.22563
+17:50:20.701891  |  Epoch 5  |  Training loss 4.14480
+17:51:24.970853  |  Epoch 10  |  Training loss 4.04710
+17:52:29.070779  |  Epoch 15  |  Training loss 4.01585
+17:53:33.242451  |  Epoch 20  |  Training loss 4.00040
+17:54:37.465465  |  Epoch 25  |  Training loss 3.99077
+17:55:41.954496  |  Epoch 30  |  Training loss 3.98408
+
+ --- Accuracy --- 
+Training
+Accuracy: 0.24373
+Validation
+Accuracy: 0.23731
+Training
+Accuracy: 0.24373
+Validation
+Accuracy: 0.23731
+Test
+Accuracy: 0.23944
+-----------------------------------------------------------
+the
+0  |   similitude: 1.000000   |   the 
+1  |   similitude: 0.758958   |   several 
+2  |   similitude: 0.755950   |   ten 
+3  |   similitude: 0.627996   |   twelve 
+4  |   similitude: 0.625929   |   four 
+5  |   similitude: 0.564865   |   which 
+6  |   similitude: 0.560868   |   this 
+7  |   similitude: 0.558030   |   hot 
+8  |   similitude: 0.548466   |   whether 
+9  |   similitude: 0.546429   |   size 
+-----------------------------------------------------------
+table
+0  |   similitude: 1.000000   |   table 
+1  |   similitude: 0.747552   |   floor 
+2  |   similitude: 0.710058   |   pure 
+3  |   similitude: 0.680133   |   bell 
+4  |   similitude: 0.672612   |   regard 
+5  |   similitude: 0.670925   |   anger 
+6  |   similitude: 0.665575   |   strange 
+7  |   similitude: 0.651407   |   trench 
+8  |   similitude: 0.644953   |   walls 
+9  |   similitude: 0.640987   |   effort 
+-----------------------------------------------------------
+man
+0  |   similitude: 1.000000   |   man 
+1  |   similitude: 0.906271   |   lady 
+2  |   similitude: 0.830071   |   women 
+3  |   similitude: 0.819564   |   cat 
+4  |   similitude: 0.793678   |   anyone 
+5  |   similitude: 0.790942   |   epoch 
+6  |   similitude: 0.765349   |   francs 
+7  |   similitude: 0.749886   |   week 
+8  |   similitude: 0.749154   |   moments 
+9  |   similitude: 0.744831   |   girl 
+-----------------------------------------------------------
+little
+0  |   similitude: 1.000000   |   little 
+1  |   similitude: 0.787052   |   hill 
+2  |   similitude: 0.769175   |   form 
+3  |   similitude: 0.751546   |   main 
+4  |   similitude: 0.739084   |   gloomy 
+5  |   similitude: 0.738383   |   field 
+6  |   similitude: 0.718410   |   cellar 
+7  |   similitude: 0.706732   |   stone 
+8  |   similitude: 0.699667   |   thousand 
+9  |   similitude: 0.687579   |   golden 
+-----------------------------------------------------------
+big
+0  |   similitude: 1.000000   |   big 
+1  |   similitude: 0.747176   |   cold 
+2  |   similitude: 0.728517   |   thanks 
+3  |   similitude: 0.727827   |   sea 
+4  |   similitude: 0.723657   |   visible 
+5  |   similitude: 0.687666   |   case 
+6  |   similitude: 0.665348   |   thin 
+7  |   similitude: 0.644787   |   dress 
+8  |   similitude: 0.642324   |   begin 
+9  |   similitude: 0.638879   |   glad 
+-----------------------------------------------------------
+always
+0  |   similitude: 1.000000   |   always 
+1  |   similitude: 0.745625   |   badly 
+2  |   similitude: 0.673238   |   impossible 
+3  |   similitude: 0.658113   |   thy 
+4  |   similitude: 0.640422   |   le 
+5  |   similitude: 0.631338   |   required 
+6  |   similitude: 0.619266   |   simple 
+7  |   similitude: 0.613837   |   stout 
+8  |   similitude: 0.597767   |   much 
+9  |   similitude: 0.591173   |   intelligence 
+-----------------------------------------------------------
+mind
+0  |   similitude: 1.000000   |   mind 
+1  |   similitude: 0.818009   |   following 
+2  |   similitude: 0.758016   |   minute 
+3  |   similitude: 0.729446   |   bit 
+4  |   similitude: 0.719204   |   sort 
+5  |   similitude: 0.712358   |   perfect 
+6  |   similitude: 0.706782   |   eight 
+7  |   similitude: 0.675822   |   shield 
+8  |   similitude: 0.668637   |   level 
+9  |   similitude: 0.662833   |   wet 
+-----------------------------------------------------------
+black
+0  |   similitude: 1.000000   |   black 
+1  |   similitude: 0.779272   |   seeds 
+2  |   similitude: 0.773424   |   ancient 
+3  |   similitude: 0.752337   |   nose 
+4  |   similitude: 0.751760   |   ideas 
+5  |   similitude: 0.751349   |   horrible 
+6  |   similitude: 0.733476   |   moving 
+7  |   similitude: 0.727239   |   souls 
+8  |   similitude: 0.707666   |   fortune 
+9  |   similitude: 0.703287   |   frightened 
+-----------------------------------------------------------
+white
+0  |   similitude: 1.000000   |   white 
+1  |   similitude: 0.740482   |   learned 
+2  |   similitude: 0.731949   |   letter 
+3  |   similitude: 0.684313   |   gradually 
+4  |   similitude: 0.671193   |   nearer 
+5  |   similitude: 0.662098   |   wonderful 
+6  |   similitude: 0.652647   |   path 
+7  |   similitude: 0.643712   |   rising 
+8  |   similitude: 0.642787   |   somewhat 
+9  |   similitude: 0.642736   |   past 
+-----------------------------------------------------------
+child
+0  |   similitude: 1.000000   |   child 
+1  |   similitude: 0.776161   |   month 
+2  |   similitude: 0.762960   |   woman 
+3  |   similitude: 0.750641   |   instant 
+4  |   similitude: 0.717569   |   gardener 
+5  |   similitude: 0.709019   |   moment 
+6  |   similitude: 0.681499   |   sewer 
+7  |   similitude: 0.679344   |   grandfather 
+8  |   similitude: 0.675691   |   companion 
+9  |   similitude: 0.664729   |   agreement 
+-----------------------------------------------------------
+children
+0  |   similitude: 1.000000   |   children 
+1  |   similitude: 0.868018   |   doors 
+2  |   similitude: 0.804989   |   wedding 
+3  |   similitude: 0.745215   |   clothes 
+4  |   similitude: 0.711684   |   troops 
+5  |   similitude: 0.702824   |   those 
+6  |   similitude: 0.701638   |   moon 
+7  |   similitude: 0.697885   |   ground 
+8  |   similitude: 0.688213   |   vague 
+9  |   similitude: 0.640365   |   shock 
+-----------------------------------------------------------
+yes
+0  |   similitude: 1.000000   |   yes 
+1  |   similitude: 0.695034   |   perfectly 
+2  |   similitude: 0.675257   |   will 
+3  |   similitude: 0.665996   |   should 
+4  |   similitude: 0.620393   |   certainly 
+5  |   similitude: 0.601264   |   - 
+6  |   similitude: 0.588473   |   generally 
+7  |   similitude: 0.582154   |   father 
+8  |   similitude: 0.578001   |   comrades 
+9  |   similitude: 0.568389   |   affairs 
+-----------------------------------------------------------
+out
+0  |   similitude: 1.000000   |   out 
+1  |   similitude: 0.750061   |   escape 
+2  |   similitude: 0.742225   |   inn 
+3  |   similitude: 0.717694   |   cut 
+4  |   similitude: 0.709058   |   sense 
+5  |   similitude: 0.705383   |   answer 
+6  |   similitude: 0.705367   |   sign 
+7  |   similitude: 0.698551   |   along 
+8  |   similitude: 0.693388   |   use 
+9  |   similitude: 0.692220   |   conceal 
+-----------------------------------------------------------
+me
+0  |   similitude: 1.000000   |   me 
+1  |   similitude: 0.735942   |   thee 
+2  |   similitude: 0.655028   |   expect 
+3  |   similitude: 0.654081   |   rise 
+4  |   similitude: 0.648122   |   o 
+5  |   similitude: 0.603013   |   itself 
+6  |   similitude: 0.597273   |   mean 
+7  |   similitude: 0.581617   |   considerable 
+8  |   similitude: 0.575599   |   stepped 
+9  |   similitude: 0.559065   |   forget 
+-----------------------------------------------------------
+have
+0  |   similitude: 1.000000   |   have 
+1  |   similitude: 0.778278   |   would 
+2  |   similitude: 0.753095   |   committed 
+3  |   similitude: 0.690694   |   sign 
+4  |   similitude: 0.689707   |   be 
+5  |   similitude: 0.662029   |   grow 
+6  |   similitude: 0.658409   |   understand 
+7  |   similitude: 0.648223   |   please 
+8  |   similitude: 0.645802   |   cut 
+9  |   similitude: 0.638121   |   show 
+-----------------------------------------------------------
+be
+0  |   similitude: 1.000000   |   be 
+1  |   similitude: 0.828963   |   proceed 
+2  |   similitude: 0.746547   |   start 
+3  |   similitude: 0.723078   |   sprang 
+4  |   similitude: 0.720232   |   produce 
+5  |   similitude: 0.714441   |   finally 
+6  |   similitude: 0.698438   |   remains 
+7  |   similitude: 0.689707   |   have 
+8  |   similitude: 0.686354   |   generally 
+9  |   similitude: 0.647959   |   may 

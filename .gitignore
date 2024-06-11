@@ -1,0 +1,23 @@
+*__pycache__
+*_cache
+*.vscode
+# no backup files
+*~*
+# no ipynb checkpoints
+*.ipynb_checkpoints*
+# no generated html files
+*docs/_build/*
+# no tmp files
+tmp/*
+# sensible folders
+*admin_notes*
+*admin*
+*notes*
+# sensible files
+*odp
+*.xcf
+*README.pdf*
+!README.md
+
+
+
