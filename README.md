@@ -8,7 +8,7 @@ You can find in this repository all the resources used for the practical part of
 
 The course includes three mandatory and graded projects where students practice implementation and application of machine learning algorithms into real-world data. Project assignments are done in pairs and are available three weeks before the deadline.
 
-In addition, there are optional weekly exercises with solution to help student practice what they have learn from the book and to prepare them for the mandatory projects.
+In addition, there are optional weekly exercises with solution to help student practice what they have learned from the book and to prepare them for the mandatory projects.
 
 In this repository, you can find all the exercises and projects as well as suggestion of solution for each of them.
 
