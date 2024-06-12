@@ -4,7 +4,7 @@ Welcome to the main page for the practical part of the course **[INF265: Deep le
 
 You can find in this repository all the resources used for the practical part of the course. In addition to the resources you find here, the theoretical part of the course was based on the online book "[Dive into deep learning](https://d2l.ai/)" and registered participants had access to Q&A sessions with the course instructor.
 
-### Course content (Practical part)
+## Course content (Practical part)
 
 The course includes three mandatory and graded projects where students practice implementation and application of machine learning algorithms into real-world data. Project assignments are done in pairs and are available three weeks before the deadline.
 
@@ -33,7 +33,7 @@ In this repository, you can find all the exercises and projects as well as sugge
 5. **Module 4: Generative models**
    1. AE, VAE, GAN
 
-### Learning Outcomes (both practical and theoretical parts)
+## Learning Outcomes (both practical and theoretical parts)
 
 By the end of this course, students should have the following competences:
 
