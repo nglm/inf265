@@ -17,6 +17,7 @@ In this repository, you can find all the exercises and projects as well as sugge
    2. Define, train and evaluate a basic Neural Network in Pytorch
    3. Define a custom deep Neural Network in Pytorch
    4. Computational graph
+   5. Input and output shapes of convolutional neural network layers
 2. **Module 1: Deep Learning Basics**
    1. Pre-trained neural networks
    2. Machine learning pipeline and MLP
