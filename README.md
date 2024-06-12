@@ -23,7 +23,7 @@ In this repository, you can find all the exercises and projects as well as sugge
    3. Analysing data and results
    4. **PROJECT 1**: Backpropagation and gradient descent
 3. **Module 2: Image data**
-   1. Convolutional layer
+   1. Convolutional layer (+ BONUS: CNN: visualization and interpretation)
    2. Residual networks
    3. **PROJECT 2**: Object localization and detection
 4. **Module 3: Sequence data**
